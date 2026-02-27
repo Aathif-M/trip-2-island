@@ -4,23 +4,26 @@ export default function About() {
     return (
         <div className="bg-sand text-primary w-full">
             {/* Hero Section */}
-            <section className="h-screen flex flex-col lg:flex-row">
-                <div className="w-full lg:w-1/2 h-full flex items-center justify-center p-12 lg:p-24 bg-primary text-sand relative z-10">
-                    <div>
-                        <span className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-6 block">Our Story</span>
-                        <h1 className="font-serif text-5xl lg:text-7xl leading-tight">
-                            We blend local <br />
-                            expertise with <br />
-                            <span className="italic text-sand font-light">open arms.</span>
-                        </h1>
-                    </div>
-                </div>
-                <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
+            <section className="h-screen w-full relative flex items-center justify-center">
+                <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&q=80&w=1000"
+                        src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&q=80&w=2000"
                         alt="Local guide in Sri Lanka"
                         className="w-full h-full object-cover"
                     />
+                    {/* Dark gradient overlay to ensure navbar and text are highly visible */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 z-0"></div>
+                </div>
+
+                <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
+                    <div className="max-w-2xl">
+                        <span className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-6 block">Our Story</span>
+                        <h1 className="font-serif text-5xl lg:text-7xl leading-tight text-sand">
+                            We blend local <br />
+                            expertise with <br />
+                            <span className="italic text-sand/70 font-light">open arms.</span>
+                        </h1>
+                    </div>
                 </div>
             </section>
 

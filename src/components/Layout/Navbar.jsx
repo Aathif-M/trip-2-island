@@ -26,14 +26,22 @@ export default function Navbar() {
         { name: 'Contact', path: '/contact' },
     ];
 
-    const isDarkHero = ['/', '/about'].includes(location.pathname);
+    const isHome = location.pathname === '/';
+    const isAbout = location.pathname === '/about';
+    const isDarkHero = isHome || isAbout;
+
+    // We add a subtle dark gradient text protection on the About page since the image could be bright
+    const navBackground = scrolled
+        ? 'glass py-3'
+        : (isAbout ? 'bg-gradient-to-b from-primary/80 to-transparent py-5' : 'bg-transparent py-5');
+
     const logoColor = scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary');
     const linkColor = scrolled ? 'text-primary/80' : (isDarkHero ? 'text-sand/90' : 'text-primary/80');
     const menuIconColor = isOpen ? 'text-sand' : (scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary'));
 
     return (
         <>
-            <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
+            <nav className={`fixed w-full z-50 transition-all duration-300 ${navBackground}`}>
                 <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 relative z-50">
