@@ -36,19 +36,19 @@ export default function CuratedItineraries() {
             title: "Culture & History",
             duration: "10 Days",
             desc: "Walk amidst ancient fortresses, sacred relics, and time-honored traditions in the Cultural Triangle.",
-            img: "https://images.unsplash.com/photo-1588614959060-4d144f28b207?auto=format&fit=crop&q=80&w=800"
+            img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800"
         },
         {
             title: "Wildlife Safari",
             duration: "12 Days",
             desc: "Track elusive leopards in Yala and witness the majestic elephant gathering at Minneriya.",
-            img: "https://images.unsplash.com/photo-1601006509420-a61dc0d0151c?auto=format&fit=crop&q=80&w=800"
+            img: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&q=80&w=800"
         },
         {
             title: "Honeymoon Escapes",
             duration: "14 Days",
             desc: "Secluded boutique luxury, private beach dinners, and romantic train rides through the hills.",
-            img: "https://images.unsplash.com/photo-1544482590-7db078b5e954?auto=format&fit=crop&q=80&w=800"
+            img: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=800"
         },
         {
             title: "Family Adventures",

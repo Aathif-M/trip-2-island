@@ -28,7 +28,7 @@ export default function Footer() {
                     <h4 className="font-serif text-xl font-medium mb-2">Quick Links</h4>
                     <Link to="/about" className="text-sand/70 hover:text-accent transition-colors text-sm">About Us</Link>
                     <Link to="/contact" className="text-sand/70 hover:text-accent transition-colors text-sm">Contact Us</Link>
-                    <Link to="#" className="text-sand/70 hover:text-accent transition-colors text-sm">Travel Journal</Link>
+                    <Link to="/journal" className="text-sand/70 hover:text-accent transition-colors text-sm">Travel Journal</Link>
                     <Link to="#" className="text-sand/70 hover:text-accent transition-colors text-sm">FAQs</Link>
                     <Link to="#" className="text-sand/70 hover:text-accent transition-colors text-sm">Terms & Conditions</Link>
                 </div>

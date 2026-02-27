@@ -23,10 +23,6 @@ export default function Hero() {
         <section ref={container} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-primary">
             {/* Video Placeholder */}
             <div className="absolute inset-0 z-0">
-                <div className="w-full h-full bg-primary/40 flex flex-col items-center justify-center text-sand/50 absolute z-10">
-                    <span className="text-xl font-mono tracking-widest">[PLACEHOLDER]</span>
-                    <span className="text-sm">Cinematic 4K Drone Video of Sri Lankan Tea Fields</span>
-                </div>
                 <img
                     src="https://images.unsplash.com/photo-1546708973-2475df18fc73?auto=format&fit=crop&q=80&w=2000"
                     alt="Sri Lanka landscape"

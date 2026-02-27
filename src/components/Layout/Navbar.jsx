@@ -19,12 +19,17 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'Destinations', path: '/destinations/sri-lanka' },
-        { name: 'Itineraries', path: '#' },
-        { name: 'Places to Stay', path: '#' },
-        { name: 'Travel Journal', path: '#' },
+        { name: 'Itineraries', path: '/itineraries' },
+        { name: 'Places to Stay', path: '/places-to-stay' },
+        { name: 'Travel Journal', path: '/journal' },
         { name: 'About Us', path: '/about' },
         { name: 'Contact', path: '/contact' },
     ];
+
+    const isDarkHero = ['/', '/about'].includes(location.pathname);
+    const logoColor = scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary');
+    const linkColor = scrolled ? 'text-primary/80' : (isDarkHero ? 'text-sand/90' : 'text-primary/80');
+    const menuIconColor = isOpen ? 'text-sand' : (scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary'));
 
     return (
         <>
@@ -33,14 +38,14 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 relative z-50">
                         <Leaf className="w-8 h-8 text-accent" />
-                        <span className={`font-serif text-2xl font-bold tracking-tight ${scrolled ? 'text-primary' : 'text-sand'}`}>
+                        <span className={`font-serif text-2xl font-bold tracking-tight ${logoColor}`}>
                             trip<span className="text-accent">2</span>island
                         </span>
                     </Link>
 
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center gap-8">
-                        <div className={`flex gap-6 font-medium text-sm tracking-wide ${scrolled ? 'text-primary/80' : 'text-sand/90'}`}>
+                        <div className={`flex gap-6 font-medium text-sm tracking-wide ${linkColor}`}>
                             {navLinks.map((link) => (
                                 <Link key={link.name} to={link.path} className="hover:text-accent transition-colors">
                                     {link.name}
@@ -54,7 +59,7 @@ export default function Navbar() {
 
                     {/* Mobile Toggle */}
                     <button
-                        className={`lg:hidden relative z-50 ${isOpen ? 'text-sand' : (scrolled ? 'text-primary' : 'text-sand')}`}
+                        className={`lg:hidden relative z-50 ${menuIconColor} transition-colors`}
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}

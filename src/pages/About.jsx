@@ -11,14 +11,11 @@ export default function About() {
                         <h1 className="font-serif text-5xl lg:text-7xl leading-tight">
                             We blend local <br />
                             expertise with <br />
-                            <span className="italic text-accent">open arms.</span>
+                            <span className="italic text-sand font-light">open arms.</span>
                         </h1>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 h-[50vh] lg:h-full relative">
-                    <div className="absolute inset-0 bg-primary/20 flex items-center justify-center z-10 text-sand/60">
-                        [PLACEHOLDER: Smiling Local Guide in Tea Plantation]
-                    </div>
                     <img
                         src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&q=80&w=1000"
                         alt="Local guide in Sri Lanka"

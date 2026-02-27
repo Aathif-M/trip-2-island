@@ -82,12 +82,11 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <div className="flex-grow rounded-3xl overflow-hidden relative min-h-[250px] bg-primary/20 flex items-center justify-center text-primary/50">
-                            <span className="absolute z-10 font-bold tracking-widest">[PLACEHOLDER: Serene Beach]</span>
+                        <div className="flex-grow rounded-3xl overflow-hidden relative min-h-[250px] bg-primary/20 flex items-center justify-center text-primary/50 shadow-inner">
                             <img
                                 src="https://images.unsplash.com/photo-1544482590-7db078b5e954?auto=format&fit=crop&q=80&w=800"
                                 alt="Sri Lanka Beach"
-                                className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     </div>

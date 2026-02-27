@@ -45,7 +45,7 @@ export default function DestinationsGrid() {
         {
             name: "Hill Country",
             desc: "Misty tea estates & waterfalls",
-            img: "https://images.unsplash.com/photo-1625736300986-ca2bc1f4e1f7?auto=format&fit=crop&q=80&w=800",
+            img: "https://images.unsplash.com/photo-1586227740560-8cf2732c1531?auto=format&fit=crop&q=80&w=800",
             colSpan: "col-span-1 md:col-span-1",
             rowSpan: "row-span-1",
             aspect: "aspect-[4/3]"
@@ -53,7 +53,7 @@ export default function DestinationsGrid() {
         {
             name: "Northern Explorer",
             desc: "Untamed nature & vibrant heritage",
-            img: "https://images.unsplash.com/photo-1620065095066-6ce22a466a93?auto=format&fit=crop&q=80&w=1200",
+            img: "https://images.unsplash.com/photo-1544280590-db5f2fc71fc6?auto=format&fit=crop&q=80&w=1200",
             colSpan: "col-span-1 md:col-span-2",
             rowSpan: "row-span-1",
             aspect: "aspect-[21/9]"

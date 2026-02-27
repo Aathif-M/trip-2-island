@@ -9,11 +9,17 @@ export default function Destinations() {
                     </p>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="w-full h-[60vh] bg-primary/5 rounded-3xl border border-primary/10 flex flex-col items-center justify-center mb-24 relative overflow-hidden">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-primary/40 z-10 shadow-inner">
-                        <span className="text-xl font-bold tracking-widest">[PLACEHOLDER]</span>
-                        <span className="text-sm">Interactive SVG/Canvas Map of Sri Lanka</span>
+                {/* Map Area */}
+                <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden mb-24 relative shadow-2xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1546708973-2475df18fc73?auto=format&fit=crop&q=80&w=2000"
+                        alt="Map of Sri Lanka"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end justify-center pb-12">
+                        <button className="bg-accent text-sand px-8 py-4 rounded-full font-semibold hover:scale-105 transition shadow-lg shadow-accent/20">
+                            Launch Interactive Map
+                        </button>
                     </div>
                 </div>
 
@@ -22,11 +28,10 @@ export default function Destinations() {
                     {['South Coast', 'Cultural Triangle', 'Hill Country'].map((region, idx) => (
                         <div key={idx} className={`flex flex-col ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}>
                             <div className="w-full lg:w-1/2 h-[500px] bg-primary/20 rounded-2xl flex items-center justify-center text-primary/50 relative overflow-hidden">
-                                <span className="absolute z-10 font-bold tracking-widest">[PLACEHOLDER IMAGE]</span>
                                 <img
                                     src={`https://images.unsplash.com/photo-${idx === 0 ? '1577717903315-1691ae25ab3f' : idx === 1 ? '1552465011-b4e21bf6e79a' : '1625736300986-ca2bc1f4e1f7'}?auto=format&fit=crop&q=80&w=1000`}
                                     alt={region}
-                                    className="w-full h-full object-cover mix-blend-overlay opacity-60"
+                                    className="w-full h-full object-cover mix-blend-overlay opacity-60 hover:opacity-100 hover:mix-blend-normal transition-all duration-700"
                                 />
                             </div>
                             <div className="w-full lg:w-1/2">
