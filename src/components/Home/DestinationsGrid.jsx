@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -28,6 +29,7 @@ export default function DestinationsGrid() {
     const regions = [
         {
             name: "South Coast",
+            id: "south-coast",
             desc: "Palm-fringed golden beaches & surf towns",
             img: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=1000",
             colSpan: "col-span-1 md:col-span-2",
@@ -36,6 +38,7 @@ export default function DestinationsGrid() {
         },
         {
             name: "Cultural Triangle",
+            id: "cultural-triangle",
             desc: "Ancient ruins & sacred temples",
             img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800",
             colSpan: "col-span-1 md:col-span-1",
@@ -44,6 +47,7 @@ export default function DestinationsGrid() {
         },
         {
             name: "Hill Country",
+            id: "hill-country",
             desc: "Misty tea estates & waterfalls",
             img: "https://images.unsplash.com/photo-1586227740560-8cf2732c1531?auto=format&fit=crop&q=80&w=800",
             colSpan: "col-span-1 md:col-span-1",
@@ -52,6 +56,7 @@ export default function DestinationsGrid() {
         },
         {
             name: "Northern Explorer",
+            id: "northern-explorer",
             desc: "Untamed nature & vibrant heritage",
             img: "https://images.unsplash.com/photo-1544280590-db5f2fc71fc6?auto=format&fit=crop&q=80&w=1200",
             colSpan: "col-span-1 md:col-span-2",
@@ -68,16 +73,17 @@ export default function DestinationsGrid() {
                         <h2 className="text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4">Discover the Island</h2>
                         <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-sand">Regions of Wonder</h3>
                     </div>
-                    <button className="hidden md:flex items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-1">
+                    <Link to="/destinations/sri-lanka" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-1">
                         View All Destinations <ArrowUpRight className="w-4 h-4" />
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[minmax(0,1fr)]">
                     {regions.map((region, idx) => (
-                        <div
+                        <Link
+                            to={`/destinations/sri-lanka#${region.id}`}
                             key={idx}
-                            className={`bento-item group relative overflow-hidden rounded-2xl cursor-pointer bg-sand/5 ${region.colSpan} ${region.rowSpan} ${region.aspect}`}
+                            className={`bento-item group relative overflow-hidden rounded-2xl cursor-pointer bg-sand/5 block ${region.colSpan} ${region.rowSpan} ${region.aspect}`}
                         >
                             <img
                                 src={region.img}
@@ -95,13 +101,13 @@ export default function DestinationsGrid() {
                                     <ArrowUpRight className="w-5 h-5 text-sand" />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 
-                <button className="md:hidden mt-10 w-full flex justify-center items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-2">
+                <Link to="/destinations/sri-lanka" className="md:hidden mt-10 w-full flex justify-center items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-2">
                     View All Destinations <ArrowUpRight className="w-4 h-4" />
-                </button>
+                </Link>
             </div>
         </section>
     );

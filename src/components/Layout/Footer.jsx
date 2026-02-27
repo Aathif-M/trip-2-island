@@ -36,11 +36,11 @@ export default function Footer() {
                 {/* Destinations */}
                 <div className="flex flex-col gap-4">
                     <h4 className="font-serif text-xl font-medium mb-2">Destinations</h4>
-                    <Link to="/destinations/sri-lanka" className="text-sand/70 hover:text-accent transition-colors text-sm">South Coast</Link>
-                    <Link to="/destinations/sri-lanka" className="text-sand/70 hover:text-accent transition-colors text-sm">Cultural Triangle</Link>
-                    <Link to="/destinations/sri-lanka" className="text-sand/70 hover:text-accent transition-colors text-sm">Hill Country</Link>
-                    <Link to="/destinations/sri-lanka" className="text-sand/70 hover:text-accent transition-colors text-sm">Northern Explorer</Link>
-                    <Link to="/destinations/sri-lanka" className="text-sand/70 hover:text-accent transition-colors text-sm">East Coast</Link>
+                    <Link to="/destinations/sri-lanka#south-coast" className="text-sand/70 hover:text-accent transition-colors text-sm">South Coast</Link>
+                    <Link to="/destinations/sri-lanka#cultural-triangle" className="text-sand/70 hover:text-accent transition-colors text-sm">Cultural Triangle</Link>
+                    <Link to="/destinations/sri-lanka#hill-country" className="text-sand/70 hover:text-accent transition-colors text-sm">Hill Country</Link>
+                    <Link to="/destinations/sri-lanka#northern-explorer" className="text-sand/70 hover:text-accent transition-colors text-sm">Northern Explorer</Link>
+                    <Link to="/destinations/sri-lanka#east-coast" className="text-sand/70 hover:text-accent transition-colors text-sm">East Coast</Link>
                 </div>
 
                 {/* Contact Info */}

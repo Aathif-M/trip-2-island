@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -75,15 +76,15 @@ export default function CuratedItineraries() {
                         Every itinerary is fully customizable to your pace and preferences.
                     </p>
                     <div>
-                        <button className="bg-primary text-sand px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors">
+                        <Link to="/itineraries" className="bg-primary text-sand px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors inline-block">
                             View All Paths
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
                 {/* Cards */}
                 {itineraries.map((item, idx) => (
-                    <div key={idx} className="w-full lg:w-[500px] shrink-0 group cursor-pointer mb-8 lg:mb-0">
+                    <Link to="/itineraries" key={idx} className="w-full lg:w-[500px] shrink-0 group cursor-pointer mb-8 lg:mb-0 block">
                         <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden mb-6">
                             <img
                                 src={item.img}
@@ -96,7 +97,7 @@ export default function CuratedItineraries() {
                         </div>
                         <h4 className="font-serif text-3xl mb-3 group-hover:text-accent transition-colors">{item.title}</h4>
                         <p className="text-primary/70">{item.desc}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
