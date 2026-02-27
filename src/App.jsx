@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Destinations from './pages/Destinations';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
+import Terms from './pages/Terms';
 import Itineraries from './pages/Itineraries';
 import PlacesToStay from './pages/PlacesToStay';
 import Journal from './pages/Journal';
@@ -20,6 +22,8 @@ function App() {
                     <Route path="/itineraries" element={<Itineraries />} />
                     <Route path="/places-to-stay" element={<PlacesToStay />} />
                     <Route path="/journal" element={<Journal />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/terms" element={<Terms />} />
                 </Routes>
             </Layout>
         </Router>
