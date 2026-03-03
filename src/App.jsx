@@ -12,7 +12,7 @@ import Journal from './pages/Journal';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/trip-2-island">
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
