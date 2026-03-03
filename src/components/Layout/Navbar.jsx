@@ -73,7 +73,7 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center relative z-50">
                         <img
                             ref={logoRef}
-                            src="/assets/logo.png"
+                            src="/trip-2-island/assets/logo.png"
                             alt="trip2island logo"
                             className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
                         />

@@ -9,7 +9,7 @@ export default function Itineraries() {
             </div>
             <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden relative shadow-2xl max-w-5xl">
                 <img
-                    src="/assets/page-itineraries.jpg"
+                    src="/trip-2-island/assets/page-itineraries.jpg"
                     alt="Cultural Triangle"
                     className="w-full h-full object-cover opacity-80"
                 />

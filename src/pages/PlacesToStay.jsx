@@ -9,7 +9,7 @@ export default function PlacesToStay() {
             </div>
             <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden relative shadow-2xl max-w-5xl">
                 <img
-                    src="/assets/page-places-to-stay.jpg"
+                    src="/trip-2-island/assets/page-places-to-stay.jpg"
                     alt="Tea Estate Bungalow"
                     className="w-full h-full object-cover opacity-80"
                 />

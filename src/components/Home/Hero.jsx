@@ -24,8 +24,8 @@ export default function Hero() {
             {/* Video / Fallback Image */}
             <div className="absolute inset-0 z-0">
                 <video
-                    src="/assets/hero-bg.mp4"
-                    poster="/assets/hero-bg.jpg"
+                    src="/trip-2-island/assets/hero-bg.mp4"
+                    poster="/trip-2-island/assets/hero-bg.jpg"
                     autoPlay
                     loop
                     muted
