@@ -25,7 +25,7 @@ export default function Destinations() {
                             onClick={() => setIsMapOpen(true)}
                             className="bg-accent text-sand px-8 py-4 rounded-full font-semibold hover:scale-105 transition shadow-lg shadow-accent/20"
                         >
-                            Launch Interactive Map
+                            Open Full Map
                         </button>
                     </div>
                 </div>
