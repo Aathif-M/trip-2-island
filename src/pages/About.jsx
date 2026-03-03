@@ -7,7 +7,7 @@ export default function About() {
             <section className="h-screen w-full relative flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&q=80&w=2000"
+                        src="/assets/page-about.jpg"
                         alt="Local guide in Sri Lanka"
                         className="w-full h-full object-cover"
                     />

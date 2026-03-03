@@ -9,7 +9,7 @@ export default function Journal() {
             </div>
             <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden relative shadow-2xl max-w-5xl">
                 <img
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000"
+                    src="/assets/page-journal.jpg"
                     alt="Traveler exploring Sri Lanka"
                     className="w-full h-full object-cover opacity-80"
                 />

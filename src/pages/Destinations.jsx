@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export default function Destinations() {
+    const [isMapOpen, setIsMapOpen] = useState(false);
+
     return (
         <div className="bg-sand text-primary min-h-screen pt-32 pb-20 px-6 lg:px-12">
             <div className="container mx-auto max-w-6xl">
@@ -12,12 +16,15 @@ export default function Destinations() {
                 {/* Map Area */}
                 <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden mb-24 relative shadow-2xl">
                     <img
-                        src="https://images.unsplash.com/photo-1546708973-2475df18fc73?auto=format&fit=crop&q=80&w=2000"
+                        src="/assets/map-sri-lanka.png"
                         alt="Map of Sri Lanka"
                         className="w-full h-full object-cover opacity-60"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end justify-center pb-12">
-                        <button className="bg-accent text-sand px-8 py-4 rounded-full font-semibold hover:scale-105 transition shadow-lg shadow-accent/20">
+                        <button
+                            onClick={() => setIsMapOpen(true)}
+                            className="bg-accent text-sand px-8 py-4 rounded-full font-semibold hover:scale-105 transition shadow-lg shadow-accent/20"
+                        >
                             Launch Interactive Map
                         </button>
                     </div>
@@ -60,7 +67,7 @@ export default function Destinations() {
                         <div key={idx} id={region.id} className={`flex flex-col ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center scroll-mt-32`}>
                             <div className="w-full lg:w-1/2 h-[500px] bg-primary/20 rounded-2xl flex items-center justify-center text-primary/50 relative overflow-hidden">
                                 <img
-                                    src={`https://images.unsplash.com/photo-${region.img}?auto=format&fit=crop&q=80&w=1000`}
+                                    src={`/assets/region-${region.id}.jpg`}
                                     alt={region.name}
                                     className="w-full h-full object-cover mix-blend-overlay opacity-80 hover:opacity-100 hover:mix-blend-normal transition-all duration-700 hover:scale-105"
                                 />
@@ -78,6 +85,34 @@ export default function Destinations() {
                     ))}
                 </div>
             </div>
+
+            {/* Map Modal */}
+            {isMapOpen && (
+                <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 lg:p-12 cursor-pointer backdrop-blur-sm transition-all duration-300"
+                    onClick={() => setIsMapOpen(false)}
+                >
+                    <div className="relative w-full max-w-6xl h-full flex items-center justify-center">
+                        <button
+                            className="absolute top-4 right-4 lg:top-0 lg:right-0 text-white hover:text-accent z-50 p-2 transition-colors"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsMapOpen(false);
+                            }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <img
+                            src="/assets/map-sri-lanka.png"
+                            alt="Map of Sri Lanka Full Size"
+                            className="max-w-full max-h-full object-contain cursor-default rounded-xl"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

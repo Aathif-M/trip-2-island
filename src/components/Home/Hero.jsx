@@ -21,11 +21,15 @@ export default function Hero() {
 
     return (
         <section ref={container} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-primary">
-            {/* Video Placeholder */}
+            {/* Video / Fallback Image */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src="https://images.unsplash.com/photo-1546708973-2475df18fc73?auto=format&fit=crop&q=80&w=2000"
-                    alt="Sri Lanka landscape"
+                <video
+                    src="/assets/hero-bg.mp4"
+                    poster="/assets/hero-bg.jpg"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover opacity-60 mix-blend-overlay"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/20 to-primary/80 z-0"></div>

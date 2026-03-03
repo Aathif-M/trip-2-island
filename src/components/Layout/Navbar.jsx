@@ -1,21 +1,54 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
-    useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    const navRef = useRef(null);
+    const logoRef = useRef(null);
 
     useEffect(() => {
         setIsOpen(false);
     }, [location]);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(navRef.current, {
+                width: "100%",
+                maxWidth: "100%",
+                top: 0,
+                borderRadius: 0,
+                borderColor: "transparent",
+                backgroundColor: "rgba(255, 255, 255, 1)",
+                duration: 0.4,
+                ease: "power2.inOut",
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top -50px",
+                    toggleActions: "play none none reverse",
+                }
+            });
+
+            gsap.to(logoRef.current, {
+                height: "4rem", // equivalent to h-16
+                duration: 0.4,
+                ease: "power2.inOut",
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top -50px",
+                    toggleActions: "play none none reverse",
+                }
+            });
+        });
+
+        return () => ctx.revert();
+    }, []);
 
     const navLinks = [
         { name: 'Destinations', path: '/destinations/sri-lanka' },
@@ -26,29 +59,24 @@ export default function Navbar() {
         { name: 'Contact', path: '/contact' },
     ];
 
-    const isHome = location.pathname === '/';
-    const isAbout = location.pathname === '/about';
-    const isDarkHero = isHome || isAbout;
+    // Static initial classes; GSAP handles the animation on scroll
+    const initialNavClasses = 'w-[calc(100%-2rem)] max-w-7xl mx-auto top-6 left-0 right-0 bg-white/90 backdrop-blur-md py-3 rounded-full shadow-lg border border-white/20';
 
-    // We add a subtle dark gradient text protection on the About page since the image could be bright
-    const navBackground = scrolled
-        ? 'glass py-3'
-        : (isAbout ? 'bg-gradient-to-b from-primary/80 to-transparent py-5' : 'bg-transparent py-5');
-
-    const logoColor = scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary');
-    const linkColor = scrolled ? 'text-primary/80' : (isDarkHero ? 'text-sand/90' : 'text-primary/80');
-    const menuIconColor = isOpen ? 'text-sand' : (scrolled ? 'text-primary' : (isDarkHero ? 'text-sand' : 'text-primary'));
+    const linkColor = 'text-primary/80';
+    const menuIconColor = isOpen ? 'text-sand' : 'text-primary';
 
     return (
         <>
-            <nav className={`fixed w-full z-50 transition-all duration-300 ${navBackground}`}>
-                <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <nav ref={navRef} className={`fixed z-50 ${initialNavClasses}`}>
+                <div className="container mx-auto px-6 xl:px-8 flex justify-between items-center">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2 relative z-50">
-                        <Leaf className="w-8 h-8 text-accent" />
-                        <span className={`font-serif text-2xl font-bold tracking-tight ${logoColor}`}>
-                            trip<span className="text-accent">2</span>island
-                        </span>
+                    <Link to="/" className="flex items-center relative z-50">
+                        <img
+                            ref={logoRef}
+                            src="/assets/logo.png"
+                            alt="trip2island logo"
+                            className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}

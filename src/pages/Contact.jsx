@@ -84,7 +84,7 @@ export default function Contact() {
 
                         <div className="flex-grow rounded-3xl overflow-hidden relative min-h-[250px] bg-primary/20 flex items-center justify-center text-primary/50 shadow-inner">
                             <img
-                                src="https://images.unsplash.com/photo-1544482590-7db078b5e954?auto=format&fit=crop&q=80&w=800"
+                                src="/assets/page-contact.jpg"
                                 alt="Sri Lanka Beach"
                                 className="w-full h-full object-cover"
                             />

@@ -31,7 +31,7 @@ export default function DestinationsGrid() {
             name: "South Coast",
             id: "south-coast",
             desc: "Palm-fringed golden beaches & surf towns",
-            img: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=1000",
+            img: "/assets/region-south-coast.jpg",
             colSpan: "col-span-1 md:col-span-2",
             rowSpan: "row-span-2",
             aspect: "aspect-square md:aspect-auto"
@@ -40,7 +40,7 @@ export default function DestinationsGrid() {
             name: "Cultural Triangle",
             id: "cultural-triangle",
             desc: "Ancient ruins & sacred temples",
-            img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800",
+            img: "/assets/region-cultural-triangle.jpg",
             colSpan: "col-span-1 md:col-span-1",
             rowSpan: "row-span-1",
             aspect: "aspect-[4/3]"
@@ -49,7 +49,7 @@ export default function DestinationsGrid() {
             name: "Hill Country",
             id: "hill-country",
             desc: "Misty tea estates & waterfalls",
-            img: "https://images.unsplash.com/photo-1586227740560-8cf2732c1531?auto=format&fit=crop&q=80&w=800",
+            img: "/assets/region-hill-country.jpg",
             colSpan: "col-span-1 md:col-span-1",
             rowSpan: "row-span-1",
             aspect: "aspect-[4/3]"
@@ -58,7 +58,7 @@ export default function DestinationsGrid() {
             name: "Northern Explorer",
             id: "northern-explorer",
             desc: "Untamed nature & vibrant heritage",
-            img: "https://images.unsplash.com/photo-1544280590-db5f2fc71fc6?auto=format&fit=crop&q=80&w=1200",
+            img: "/assets/region-northern-explorer.jpg",
             colSpan: "col-span-1 md:col-span-2",
             rowSpan: "row-span-1",
             aspect: "aspect-[21/9]"
