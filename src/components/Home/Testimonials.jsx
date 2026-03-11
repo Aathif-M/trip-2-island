@@ -11,7 +11,7 @@ export default function Testimonials() {
             country: "United Kingdom"
         },
         {
-            quote: "Trip2Island didn't just book hotels—they curated an immersion into the culture. The cooking class in a village home and the private wildlife drive in Yala were unforgettable highlights.",
+            quote: "Trip2Island didn't just book hotels - they curated an immersion into the culture. The cooking class in a village home and the private wildlife drive in Yala were unforgettable highlights.",
             author: "Elena Rodriguez",
             country: "Spain"
         },

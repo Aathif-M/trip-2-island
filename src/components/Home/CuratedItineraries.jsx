@@ -36,7 +36,7 @@ export default function CuratedItineraries() {
         {
             title: "Culture & History",
             duration: "10 Days",
-            desc: "Walk amidst ancient fortresses, sacred relics, and time-honored traditions in the Cultural Triangle.",
+            desc: "Walk amidst ancient fortresses, sacred relics and time-honored traditions in the Cultural Triangle.",
             img: "/trip-2-island/assets/itinerary-culture.jpg"
         },
         {
@@ -48,7 +48,7 @@ export default function CuratedItineraries() {
         {
             title: "Honeymoon Escapes",
             duration: "14 Days",
-            desc: "Secluded boutique luxury, private beach dinners, and romantic train rides through the hills.",
+            desc: "Secluded boutique luxury, private beach dinners and romantic train rides through the hills.",
             img: "/trip-2-island/assets/itinerary-honeymoon.jpg"
         },
         {

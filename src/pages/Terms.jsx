@@ -29,12 +29,12 @@ export default function Terms() {
 
                     <h2 className="text-2xl font-bold mb-4 mt-8">4. Liability</h2>
                     <p className="mb-6 leading-relaxed">
-                        Trip2Island acts only as an agent for the providers of accommodation, transport, and other services. We accept no liability for any loss, damage, injury, or illness caused by any act or omission of any such provider.
+                        Trip2Island acts only as an agent for the providers of accommodation, transport and other services. We accept no liability for any loss, damage, injury or illness caused by any act or omission of any such provider.
                     </p>
 
                     <h2 className="text-2xl font-bold mb-4 mt-8">5. Changes to Itinerary</h2>
                     <p className="mb-6 leading-relaxed">
-                        While every effort is made to operate all tours as advertised, we reserve the right to change itineraries, accommodations, and transport if circumstances demand it.
+                        While every effort is made to operate all tours as advertised, we reserve the right to change itineraries, accommodations and transport if circumstances demand it.
                     </p>
 
                     <div className="mt-12 p-6 bg-sand/30 rounded-xl border border-primary/10">

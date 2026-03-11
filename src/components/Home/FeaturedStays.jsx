@@ -55,7 +55,7 @@ export default function FeaturedStays() {
             type: "Boutique Heritage",
             title: "Amangalla",
             location: "Galle Fort",
-            desc: "Step back in time within the ramparts of a 17th-century Dutch fort. Antique furnishings, polished teak, and timeless elegance.",
+            desc: "Step back in time within the ramparts of a 17th-century Dutch fort. Antique furnishings, polished teak and timeless elegance.",
             img: "/trip-2-island/assets/stay-amangalla.jpg",
             align: "right"
         },

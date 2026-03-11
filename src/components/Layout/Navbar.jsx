@@ -24,7 +24,7 @@ export default function Navbar() {
             scrolledRef.current = isScrolled;
 
             if (isScrolled) {
-                // Scrolled DOWN — collapse into full-width solid bar
+                // Scrolled DOWN - collapse into full-width solid bar
                 gsap.to(navRef.current, {
                     width: '100%',
                     maxWidth: '100%',
@@ -44,7 +44,7 @@ export default function Navbar() {
                     ease: 'power3.out',
                 });
             } else {
-                // Scrolled back UP — restore pill shape
+                // Scrolled back UP - restore pill shape
                 gsap.to(navRef.current, {
                     width: 'calc(100% - 2rem)',
                     maxWidth: '80rem',
@@ -136,7 +136,7 @@ export default function Navbar() {
                         className={`lg:hidden relative z-50 ${menuIconColor} transition-colors`}
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                        {isOpen ? <X className="w-8 h-8 text-emerald-950" /> : <Menu className="w-8 h-8" />}
                     </button>
                 </div>
             </nav>

@@ -43,7 +43,7 @@ export default function Contact() {
 
                             <div className="flex flex-col gap-2 relative">
                                 <label className="text-sm font-semibold uppercase tracking-wider text-primary/70">Tell us about your dream trip</label>
-                                <textarea rows={6} className="bg-sand/30 border border-primary/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none" placeholder="I'd love to see elephants, stay in a boutique hotel, and relax on the beach..."></textarea>
+                                <textarea rows={6} className="bg-sand/30 border border-primary/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors resize-none" placeholder="I'd love to see elephants, stay in a boutique hotel and relax on the beach..."></textarea>
                             </div>
 
                             <button className="bg-accent text-sand py-4 rounded-xl text-lg font-bold hover:bg-accent/90 transition-colors mt-4">

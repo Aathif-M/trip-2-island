@@ -43,7 +43,7 @@ export default function About() {
                                 <Users className="w-8 h-8" />
                             </div>
                             <h3 className="font-serif text-2xl mb-4">Local Immersion</h3>
-                            <p className="text-primary/70">Connections with local artisans, tea pluckers, and families that you won't find in any guidebook.</p>
+                            <p className="text-primary/70">Connections with local artisans, tea pluckers and families that you won't find in any guidebook.</p>
                         </div>
                         <div className="flex flex-col items-center text-center">
                             <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-6 text-accent">

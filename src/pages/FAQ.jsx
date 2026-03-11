@@ -23,7 +23,7 @@ export default function FAQ() {
         },
         {
             question: "Can you customize an itinerary for me?",
-            answer: "Absolutely! We specialize in tailor-made travel. Contact us with your preferences, and we will craft an itinerary that perfectly matches your interests and style."
+            answer: "Absolutely! We specialize in tailor-made travel. Contact us with your preferences and we will craft an itinerary that perfectly matches your interests and style."
         }
     ];
 

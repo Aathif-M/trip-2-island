@@ -7,6 +7,10 @@ const QA_DATABASE = [
         reply: "You can book any of our standard itineraries directly from the 'Itineraries' page! For custom bookings, please reach out via our Contact page."
     },
     {
+        keywords: ['hi', 'hello', 'hey'],
+        reply: "Ayubowan! 👋 Welcome to Trip2Island. How can I help you plan your journey today?"
+    },
+    {
         keywords: ['price', 'cost', 'expensive', 'cheap', 'budget'],
         reply: "Our packages vary depending on the duration and style of your trip. Typical 7-day itineraries start around $1200 per person."
     },
@@ -16,11 +20,11 @@ const QA_DATABASE = [
     },
     {
         keywords: ['weather', 'best time', 'when to visit', 'rain', 'season'],
-        reply: "Sri Lanka is a year-round destination! The south/west is best from December to March, and the east coast is perfect from April to September."
+        reply: "Sri Lanka is a year-round destination! The south/west is best from December to March and the east coast is perfect from April to September."
     },
     {
         keywords: ['contact', 'email', 'phone', 'call', 'talk'],
-        reply: "You can reach our dedicated support team 24/7 at support@trip2island.com, or use the form on our Contact page."
+        reply: "You can reach our dedicated support team 24/7 at support@trip2island.com or use the form on our Contact page."
     },
 ];
 
@@ -108,8 +112,8 @@ export default function Chatbot() {
                                         {msg.sender === 'user' ? <User size={16} /> : <Bot size={16} />}
                                     </div>
                                     <div className={`px-4 py-2.5 rounded-2xl text-sm ${msg.sender === 'user'
-                                            ? 'bg-ocean text-sand rounded-br-sm'
-                                            : 'bg-white text-primary border border-primary/10 shadow-sm rounded-bl-sm'
+                                        ? 'bg-ocean text-sand rounded-br-sm'
+                                        : 'bg-white text-primary border border-primary/10 shadow-sm rounded-bl-sm'
                                         }`}>
                                         {msg.text}
                                     </div>

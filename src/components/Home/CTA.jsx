@@ -14,7 +14,7 @@ export default function CTA() {
                     <span className="italic text-accent">travel journal?</span>
                 </h2>
                 <p className="text-sand/70 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-                    Let's craft your perfect Sri Lankan journey together. Our travel designers are ready to listen, advise, and hand-tailor every detail.
+                    Let's craft your perfect Sri Lankan journey together. Our travel designers are ready to listen, advise and hand-tailor every detail.
                 </p>
 
                 <Link

@@ -36,25 +36,25 @@ export default function Destinations() {
                         {
                             id: "south-coast",
                             name: "South Coast",
-                            desc: "The sun-drenched southern coastline offers a perfect blend of lively surf towns, pristine golden beaches, and colonial heritage in Galle Fort. Spot blue whales in Mirissa or simply relax under swaying palms.",
+                            desc: "The sun-drenched southern coastline offers a perfect blend of lively surf towns, pristine golden beaches and colonial heritage in Galle Fort. Spot blue whales in Mirissa or simply relax under swaying palms.",
                             img: "1577717903315-1691ae25ab3f"
                         },
                         {
                             id: "cultural-triangle",
                             name: "Cultural Triangle",
-                            desc: "Step back thousands of years into Sri Lanka's royal past. Climb the majestic Sigiriya Rock Fortress, wander the ancient monastic complex of Polonnaruwa, and discover the cave temples of Dambulla.",
+                            desc: "Step back thousands of years into Sri Lanka's royal past. Climb the majestic Sigiriya Rock Fortress, wander the ancient monastic complex of Polonnaruwa and discover the cave temples of Dambulla.",
                             img: "1552465011-b4e21bf6e79a"
                         },
                         {
                             id: "hill-country",
                             name: "Hill Country",
-                            desc: "The misty peaks from Ella to Nuwara Eliya. Take what is considered one of the most beautiful train rides in the world, hike through emerald tea plantations, and cool off by spectacular waterfalls.",
+                            desc: "The misty peaks from Ella to Nuwara Eliya. Take what is considered one of the most beautiful train rides in the world, hike through emerald tea plantations and cool off by spectacular waterfalls.",
                             img: "1586227740560-8cf2732c1531"
                         },
                         {
                             id: "northern-explorer",
                             name: "Northern Explorer",
-                            desc: "A land of untamed nature and vibrant heritage. Explore the colorful Hindu temples of Jaffna, untouched beaches of the north, and a distinct culinary tradition steeped in history.",
+                            desc: "A land of untamed nature and vibrant heritage. Explore the colorful Hindu temples of Jaffna, untouched beaches of the north and a distinct culinary tradition steeped in history.",
                             img: "1544280590-db5f2fc71fc6"
                         },
                         {

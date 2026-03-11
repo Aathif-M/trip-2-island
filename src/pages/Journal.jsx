@@ -4,7 +4,7 @@ export default function Journal() {
             <div className="mb-12">
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl mb-4 sm:mb-6">Travel Journal</h1>
                 <p className="text-primary/70 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                    Stories, guides, and inspiration from the heart of the island. Let our journal fuel your wanderlust.
+                    Stories, guides and inspiration from the heart of the island. Let our journal fuel your wanderlust.
                 </p>
             </div>
             <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden relative shadow-2xl max-w-5xl">

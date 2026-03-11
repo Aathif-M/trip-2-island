@@ -12,7 +12,7 @@ export default function Footer() {
                         <span className="font-serif text-2xl font-bold tracking-tight">trip<span className="text-accent">2</span>island</span>
                     </Link>
                     <p className="text-sand/70 text-sm leading-relaxed">
-                        Journeys of a thousand lifetimes. Tailor-made, luxury, and experiential travel across the beautiful island of Sri Lanka.
+                        Journeys of a thousand lifetimes. Tailor-made, luxury and experiential travel across the beautiful island of Sri Lanka.
                     </p>
                     <div className="flex flex-col gap-2">
                         <h4 className="font-semibold text-sm tracking-widest uppercase text-sand/50">Travel Inspiration</h4>
