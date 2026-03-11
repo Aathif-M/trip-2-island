@@ -33,8 +33,8 @@ export default function DestinationsGrid() {
             desc: "Palm-fringed golden beaches & surf towns",
             img: "/trip-2-island/assets/region-south-coast.jpg",
             colSpan: "col-span-1 md:col-span-2",
-            rowSpan: "row-span-2",
-            aspect: "aspect-square md:aspect-auto"
+            rowSpan: "md:row-span-2",
+            aspect: "aspect-video md:aspect-auto"
         },
         {
             name: "Cultural Triangle",
@@ -42,8 +42,8 @@ export default function DestinationsGrid() {
             desc: "Ancient ruins & sacred temples",
             img: "/trip-2-island/assets/region-cultural-triangle.jpg",
             colSpan: "col-span-1 md:col-span-1",
-            rowSpan: "row-span-1",
-            aspect: "aspect-[4/3]"
+            rowSpan: "md:row-span-1",
+            aspect: "aspect-video md:aspect-[4/3]"
         },
         {
             name: "Hill Country",
@@ -51,8 +51,8 @@ export default function DestinationsGrid() {
             desc: "Misty tea estates & waterfalls",
             img: "/trip-2-island/assets/region-hill-country.jpg",
             colSpan: "col-span-1 md:col-span-1",
-            rowSpan: "row-span-1",
-            aspect: "aspect-[4/3]"
+            rowSpan: "md:row-span-1",
+            aspect: "aspect-video md:aspect-[4/3]"
         },
         {
             name: "Northern Explorer",
@@ -60,8 +60,8 @@ export default function DestinationsGrid() {
             desc: "Untamed nature & vibrant heritage",
             img: "/trip-2-island/assets/region-northern-explorer.jpg",
             colSpan: "col-span-1 md:col-span-2",
-            rowSpan: "row-span-1",
-            aspect: "aspect-[21/9]"
+            rowSpan: "md:row-span-1",
+            aspect: "aspect-video md:aspect-[21/9]"
         }
     ];
 
@@ -78,7 +78,7 @@ export default function DestinationsGrid() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[minmax(0,1fr)]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {regions.map((region, idx) => (
                         <Link
                             to={`/destinations/sri-lanka#${region.id}`}
