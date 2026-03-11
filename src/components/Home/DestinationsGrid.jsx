@@ -68,7 +68,7 @@ export default function DestinationsGrid() {
     return (
         <section ref={container} className="py-24 px-6 lg:px-12 bg-primary text-sand">
             <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 md:gap-0">
                     <div>
                         <h2 className="text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4">Discover the Island</h2>
                         <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-sand">Regions of Wonder</h3>

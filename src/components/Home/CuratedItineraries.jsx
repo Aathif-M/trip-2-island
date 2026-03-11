@@ -66,7 +66,7 @@ export default function CuratedItineraries() {
                 <h3 className="font-serif text-4xl text-primary">Signature Itineraries</h3>
             </div>
 
-            <div ref={containerRef} className="flex flex-col lg:flex-row gap-8 lg:gap-16 px-6 lg:px-[10vw] min-w-max">
+            <div ref={containerRef} className="flex flex-col lg:flex-row gap-8 lg:gap-16 px-6 lg:px-[10vw] w-full lg:min-w-max">
                 {/* Intro Block (Desktop only) */}
                 <div className="hidden lg:flex w-[400px] flex-col justify-center pr-12 shrink-0">
                     <h2 className="text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4">Curated For You</h2>
