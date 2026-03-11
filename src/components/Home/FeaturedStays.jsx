@@ -70,19 +70,19 @@ export default function FeaturedStays() {
     ];
 
     return (
-        <section ref={container} className="py-32 px-6 lg:px-12 bg-primary text-sand">
+        <section ref={container} className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-primary text-sand">
             <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-24">
                     <h2 className="text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4">Exceptional Accommodation</h2>
                     <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl">Featured Stays</h3>
                 </div>
 
-                <div className="flex flex-col gap-24 lg:gap-32">
+                <div className="flex flex-col gap-16 sm:gap-24 lg:gap-32">
                     {stays.map((stay, idx) => (
-                        <div key={idx} className={`stay-card flex flex-col ${stay.align === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}>
+                        <div key={idx} className={`stay-card flex flex-col ${stay.align === 'right' ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 sm:gap-12 lg:gap-20 items-center`}>
 
                             {/* Image Container */}
-                            <div className="w-full lg:w-3/5 h-[50vh] lg:h-[80vh] overflow-hidden rounded-2xl relative">
+                            <div className="w-full lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-[75vh] overflow-hidden rounded-2xl relative">
                                 <img
                                     src={stay.img}
                                     alt={stay.title}
@@ -95,11 +95,11 @@ export default function FeaturedStays() {
                                 <span className="text-accent font-semibold tracking-widest text-sm uppercase mb-4 block">
                                     {stay.type}
                                 </span>
-                                <h4 className="font-serif text-4xl md:text-5xl mb-4 text-sand">{stay.title}</h4>
+                                <h4 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-4 text-sand">{stay.title}</h4>
                                 <div className="flex items-center gap-2 mb-8 text-sand/50 text-sm tracking-wider uppercase">
                                     <span>📍 {stay.location}</span>
                                 </div>
-                                <p className="text-sand/70 text-lg leading-relaxed mb-10">
+                                <p className="text-sand/70 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
                                     {stay.desc}
                                 </p>
                                 <div>

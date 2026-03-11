@@ -1,8 +1,8 @@
 export default function Terms() {
     return (
-        <div className="bg-sand text-primary min-h-screen pt-32 pb-20 px-6 lg:px-12">
+        <div className="bg-sand text-primary min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12">
             <div className="container mx-auto max-w-4xl bg-white p-8 md:p-16 rounded-3xl shadow-xl shadow-primary/5">
-                <h1 className="font-serif text-4xl lg:text-6xl mb-12 text-center text-primary border-b border-primary/10 pb-8">Terms & Conditions</h1>
+                <h1 className="font-serif text-3xl sm:text-4xl lg:text-6xl mb-8 sm:mb-12 text-center text-primary border-b border-primary/10 pb-6 sm:pb-8">Terms & Conditions</h1>
 
                 <div className="prose prose-lg text-primary/80 prose-headings:font-serif prose-headings:text-primary max-w-none">
                     <h2 className="text-2xl font-bold mb-4 mt-8">1. Introduction</h2>

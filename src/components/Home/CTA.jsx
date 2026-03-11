@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export default function CTA() {
     return (
-        <section className="bg-primary text-sand py-32 px-6 relative overflow-hidden">
+        <section className="bg-primary text-sand py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sand opacity-5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
 
             <div className="container mx-auto max-w-4xl text-center relative z-10">
-                <h2 className="font-serif text-5xl md:text-7xl mb-8 leading-tight">
-                    Ready to write your <br />
+                <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl mb-6 sm:mb-8 leading-tight">
+                    Ready to write your <br className="hidden sm:block" />
                     <span className="italic text-accent">travel journal?</span>
                 </h2>
                 <p className="text-sand/70 text-lg md:text-xl max-w-2xl mx-auto mb-12">

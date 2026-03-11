@@ -18,7 +18,7 @@ export default function About() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
                     <div className="max-w-2xl">
                         <span className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-6 block">Our Story</span>
-                        <h1 className="font-serif text-5xl lg:text-7xl leading-tight text-sand">
+                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl leading-tight text-sand">
                             We blend local <br />
                             expertise with <br />
                             <span className="italic text-sand/70 font-light">open arms.</span>
@@ -28,16 +28,16 @@ export default function About() {
             </section>
 
             {/* Our Vision */}
-            <section className="py-32 px-6 lg:px-12">
+            <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-12">
                 <div className="container mx-auto">
                     <div className="text-center mb-24 max-w-3xl mx-auto">
-                        <h2 className="font-serif text-4xl lg:text-5xl mb-6">Our Vision</h2>
+                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mb-6">Our Vision</h2>
                         <p className="text-primary/70 text-lg leading-relaxed">
                             We believe travel should be transformative, not just transactional. Our mission is to show you the real Sri Lanka, away from the crowds, while ensuring our presence benefits the communities we visit.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 lg:gap-20">
                         <div className="flex flex-col items-center text-center">
                             <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-6 text-accent">
                                 <Users className="w-8 h-8" />

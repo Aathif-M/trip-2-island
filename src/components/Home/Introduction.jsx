@@ -27,9 +27,9 @@ export default function Introduction() {
     }, []);
 
     return (
-        <section ref={container} className="py-32 px-6 lg:px-12 bg-sand text-primary relative z-10">
+        <section ref={container} className="py-20 sm:py-32 px-4 sm:px-6 lg:px-12 bg-sand text-primary relative z-10">
             <div className="container mx-auto max-w-4xl text-center">
-                <p className="font-serif text-3xl md:text-5xl leading-relaxed text-balance">
+                <p className="font-serif text-2xl sm:text-3xl md:text-5xl leading-relaxed text-balance">
                     <span className="intro-line block overflow-hidden">We don't just plan trips.</span>
                     <span className="intro-line block overflow-hidden mt-4">We craft <span className="italic text-accent">tailor-made private tours</span></span>
                     <span className="intro-line block overflow-hidden mt-4">for curious minds seeking the</span>

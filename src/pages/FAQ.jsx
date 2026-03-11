@@ -36,11 +36,11 @@ export default function FAQ() {
     };
 
     return (
-        <div className="bg-sand text-primary min-h-screen pt-32 pb-20 px-6 lg:px-12">
+        <div className="bg-sand text-primary min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12">
             <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-16">
-                    <h1 className="font-serif text-5xl lg:text-7xl mb-6">Frequently Asked Questions</h1>
-                    <p className="text-primary/70 text-lg">
+                    <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl mb-4 sm:mb-6">Frequently Asked Questions</h1>
+                    <p className="text-primary/70 text-base sm:text-lg">
                         Everything you need to know to prepare for your Sri Lankan adventure.
                     </p>
                 </div>
@@ -52,7 +52,7 @@ export default function FAQ() {
                                 className="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none"
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <span className="font-serif text-xl font-medium pr-8">{faq.question}</span>
+                                <span className="font-serif text-lg sm:text-xl font-medium pr-4 sm:pr-8">{faq.question}</span>
                                 {openIndex === index ? (
                                     <ChevronUp className="w-6 h-6 text-accent shrink-0" />
                                 ) : (

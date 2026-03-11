@@ -7,14 +7,14 @@ export default function Destinations() {
         <div className="bg-sand text-primary min-h-screen pt-32 pb-20 px-6 lg:px-12">
             <div className="container mx-auto max-w-6xl">
                 <div className="mb-16 text-center">
-                    <h1 className="font-serif text-5xl lg:text-7xl mb-6">Explore Sri Lanka</h1>
+                    <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl mb-6">Explore Sri Lanka</h1>
                     <p className="text-primary/70 max-w-2xl mx-auto text-lg">
                         From ancient ruins shrouded in jungle to palm-fringed beaches washed by the Indian Ocean.
                     </p>
                 </div>
 
                 {/* Map Area */}
-                <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden mb-24 relative shadow-2xl">
+                <div className="w-full h-[40vh] sm:h-[55vh] bg-primary/20 rounded-3xl overflow-hidden mb-16 sm:mb-24 relative shadow-2xl">
                     <img
                         src="/trip-2-island/assets/map-sri-lanka.png"
                         alt="Map of Sri Lanka"
@@ -31,7 +31,7 @@ export default function Destinations() {
                 </div>
 
                 {/* Regions List */}
-                <div className="flex flex-col gap-32">
+                <div className="flex flex-col gap-16 sm:gap-24 lg:gap-32">
                     {[
                         {
                             id: "south-coast",
@@ -64,8 +64,8 @@ export default function Destinations() {
                             img: "1544482590-7db078b5e954"
                         }
                     ].map((region, idx) => (
-                        <div key={idx} id={region.id} className={`flex flex-col ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center scroll-mt-32`}>
-                            <div className="w-full lg:w-1/2 h-[500px] bg-primary/20 rounded-2xl flex items-center justify-center text-primary/50 relative overflow-hidden">
+                        <div key={idx} id={region.id} className={`flex flex-col ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 sm:gap-12 lg:gap-20 items-center scroll-mt-32`}>
+                            <div className="w-full lg:w-1/2 h-[280px] sm:h-[380px] lg:h-[500px] bg-primary/20 rounded-2xl flex items-center justify-center text-primary/50 relative overflow-hidden">
                                 <img
                                     src={`/trip-2-island/assets/region-${region.id}.jpg`}
                                     alt={region.name}
@@ -73,7 +73,7 @@ export default function Destinations() {
                                 />
                             </div>
                             <div className="w-full lg:w-1/2">
-                                <h2 className="font-serif text-4xl mb-6 text-accent">{region.name}</h2>
+                                <h2 className="font-serif text-3xl sm:text-4xl mb-4 sm:mb-6 text-accent">{region.name}</h2>
                                 <p className="text-primary/70 text-lg leading-relaxed mb-8">
                                     {region.desc}
                                 </p>
