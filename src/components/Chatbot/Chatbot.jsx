@@ -23,8 +23,8 @@ const QA_DATABASE = [
         reply: "Sri Lanka is a year-round destination! The south/west is best from December to March and the east coast is perfect from April to September."
     },
     {
-        keywords: ['contact', 'email', 'phone', 'call', 'talk'],
-        reply: "You can reach our dedicated support team 24/7 at support@trip2island.com or use the form on our Contact page."
+        keywords: ['contact', 'email', 'phone', 'call', 'talk', 'whatsapp'],
+        reply: "You can reach our dedicated support team 24/7 via WhatsApp at +94 76 882 2188 or email us at info@trip2island.com."
     },
 ];
 

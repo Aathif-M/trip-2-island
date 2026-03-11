@@ -68,8 +68,8 @@ export default function Contact() {
                             <div className="flex items-start gap-4">
                                 <Phone className="w-6 h-6 text-accent shrink-0 mt-1" />
                                 <div>
-                                    <h4 className="font-semibold text-lg mb-1">Phone</h4>
-                                    <p className="text-sand/70">Intl: +94 11 234 5678<br />UK: +44 20 7123 4567</p>
+                                    <h4 className="font-semibold text-lg mb-1">WhatsApp & Phone</h4>
+                                    <a href="tel:+94768822188" className="text-sand/70">+94 76 882 2188</a>
                                 </div>
                             </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
                                 <Mail className="w-6 h-6 text-accent shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-lg mb-1">Email</h4>
-                                    <p className="text-sand/70">hello@trip2island.com</p>
+                                    <a href="mailto:info@trip2island.com" className="text-sand/70">info@trip2island.com</a>
                                 </div>
                             </div>
                         </div>

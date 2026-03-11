@@ -52,11 +52,11 @@ export default function Footer() {
                     </div>
                     <div className="flex items-center gap-3 text-sand/70 text-sm">
                         <Phone className="w-5 h-5 shrink-0 text-accent" />
-                        <p>+94 11 234 5678</p>
+                        <a href="tel:+94768822188" className="hover:text-accent transition-colors">+94 76 882 2188 (WhatsApp)</a>
                     </div>
                     <div className="flex items-center gap-3 text-sand/70 text-sm">
                         <Mail className="w-5 h-5 shrink-0 text-accent" />
-                        <p>hello@trip2island.com</p>
+                        <a href="mailto:info@trip2island.com" className="hover:text-accent transition-colors">info@trip2island.com</a>
                     </div>
 
                     <div className="flex items-center gap-4 mt-4">
