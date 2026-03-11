@@ -14,8 +14,8 @@ export default {
                 gold: "#D4AF37",    // Soft Gold
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'serif'],
-                sans: ['"Inter"', 'sans-serif'],
+                serif: ['"Cormorant Garamond"', 'serif'],
+                sans: ['"Montserrat"', 'sans-serif'],
             },
             flex: {
                 '2': '2 2 0%'
