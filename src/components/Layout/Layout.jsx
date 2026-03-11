@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import SmoothScroll from './SmoothScroll';
+import Chatbot from '../Chatbot/Chatbot';
 
 export default function Layout({ children }) {
     const { pathname, hash } = useLocation();
@@ -23,14 +24,17 @@ export default function Layout({ children }) {
     }, [pathname, hash]);
 
     return (
-        <SmoothScroll>
-            <div className="flex flex-col min-h-screen">
-                <Navbar />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <Footer />
-            </div>
-        </SmoothScroll>
+        <>
+            <SmoothScroll>
+                <div className="flex flex-col min-h-screen relative">
+                    <Navbar />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
+            </SmoothScroll>
+            <Chatbot />
+        </>
     );
 }
