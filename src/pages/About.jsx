@@ -11,8 +11,9 @@ export default function About() {
                         alt="Local guide in Sri Lanka"
                         className="w-full h-full object-cover"
                     />
-                    {/* Dark gradient overlay to ensure navbar and text are highly visible */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 z-0"></div>
+                    {/* Gradient overlay from left to right */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent z-0 pointer-events-none"></div>
+                    <div className="absolute top-0 bottom-0 left-0 w-[60vw] bg-gradient-to-r from-primary via-primary/80 to-transparent z-0 pointer-events-none"></div>
                 </div>
 
                 <div className="container mx-auto px-6 lg:px-12 relative z-10 w-full">
