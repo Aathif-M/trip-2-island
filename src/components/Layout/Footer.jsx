@@ -7,9 +7,12 @@ export default function Footer() {
             <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 {/* Brand & Newsletter */}
                 <div className="flex flex-col gap-6">
-                    <Link to="/" className="flex items-center gap-2">
-                        <Leaf className="w-8 h-8 text-accent" />
-                        <span className="font-serif text-2xl font-bold tracking-tight">trip<span className="text-accent">2</span>island</span>
+                    <Link to="/" className="flex items-center">
+                        <img
+                            src="/trip-2-island/assets/logo-light.png"
+                            alt="Trip2Island Logo"
+                            className="lg:h-13 h-13 w-auto object-contain mb-2"
+                        />
                     </Link>
                     <p className="text-sand/70 text-sm leading-relaxed">
                         Journeys of a thousand lifetimes. Tailor-made, luxury and experiential travel across the beautiful island of Sri Lanka.
