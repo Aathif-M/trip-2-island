@@ -66,14 +66,14 @@ export default function DestinationsGrid() {
     ];
 
     return (
-        <section ref={container} className="py-24 px-6 lg:px-12 bg-primary text-sand">
+        <section ref={container} className="py-24 px-6 lg:px-12 bg-sand text-primary">
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 md:gap-0">
                     <div>
                         <h2 className="text-sm font-semibold tracking-[0.2em] text-accent uppercase mb-4">Discover the Island</h2>
-                        <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-sand">Regions of Wonder</h3>
+                        <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary">Regions of Wonder</h3>
                     </div>
-                    <Link to="/destinations/sri-lanka" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-1">
+                    <Link to="/destinations/sri-lanka" className="hidden md:flex items-center gap-2 hover:text-accent transition-colors border-b border-primary/30 hover:border-accent pb-1">
                         View All Destinations <ArrowUpRight className="w-4 h-4" />
                     </Link>
                 </div>
@@ -83,7 +83,7 @@ export default function DestinationsGrid() {
                         <Link
                             to={`/destinations/sri-lanka#${region.id}`}
                             key={idx}
-                            className={`bento-item group relative overflow-hidden rounded-2xl cursor-pointer bg-sand/5 block ${region.colSpan} ${region.rowSpan} ${region.aspect}`}
+                            className={`bento-item group relative overflow-hidden rounded-2xl cursor-pointer bg-primary/5 block ${region.colSpan} ${region.rowSpan} ${region.aspect}`}
                         >
                             <img
                                 src={region.img}
@@ -105,7 +105,7 @@ export default function DestinationsGrid() {
                     ))}
                 </div>
 
-                <Link to="/destinations/sri-lanka" className="md:hidden mt-10 w-full flex justify-center items-center gap-2 hover:text-accent transition-colors border-b border-sand/30 hover:border-accent pb-2">
+                <Link to="/destinations/sri-lanka" className="md:hidden mt-10 w-full flex justify-center items-center gap-2 hover:text-accent transition-colors border-b border-primary/30 hover:border-accent pb-2">
                     View All Destinations <ArrowUpRight className="w-4 h-4" />
                 </Link>
             </div>

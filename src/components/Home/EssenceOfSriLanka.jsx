@@ -40,11 +40,11 @@ export default function EssenceOfSriLanka() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-sand px-6 md:px-12 w-full">
+        <section ref={sectionRef} className="py-24 bg-primary px-6 md:px-12 w-full">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 text-center">
-                    <h2 className="text-4xl md:text-5xl font-serif text-primary mb-4">The Essence of Sri Lanka</h2>
-                    <p className="font-sans text-slate-700 max-w-2xl mx-auto">Discover the foundational pillars that make the teardrop island a destination unlike any other.</p>
+                    <h2 className="text-4xl md:text-5xl font-serif text-sand mb-4">The Essence of Sri Lanka</h2>
+                    <p className="font-sans text-sand/60 max-w-2xl mx-auto">Discover the foundational pillars that make the teardrop island a destination unlike any other.</p>
                 </div>
 
                 <div className="grid grid-cols-12 gap-4 md:gap-6 auto-rows-[250px]">
@@ -52,7 +52,7 @@ export default function EssenceOfSriLanka() {
                         <div
                             key={index}
                             ref={el => cardsRef.current[index] = el}
-                            className={`group cursor-pointer relative overflow-hidden rounded-xl ${pillar.size} bg-primary/10`}
+                            className={`group cursor-pointer relative overflow-hidden rounded-xl ${pillar.size} bg-sand/10`}
                         >
                             <div className="absolute inset-0 bg-[#E6E9E3] scale-105 transition-transform duration-700 ease-out group-hover:scale-100 flex items-center justify-center p-6 text-center text-sm font-sans text-slate-500">
                                 {pillar.placeholder}
@@ -67,7 +67,7 @@ export default function EssenceOfSriLanka() {
                     <Link
                         to="/experiences"
                         ref={el => cardsRef.current[5] = el}
-                        className="group flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl col-span-12 md:col-span-6 row-span-2 bg-primary p-8 decoration-none"
+                        className="group flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl col-span-12 md:col-span-6 row-span-2 bg-sand/10 border border-gold/20 p-8 decoration-none"
                     >
                         <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMWEzNjI4Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] transition-transform duration-700 ease-out group-hover:scale-110"></div>
                         <h3 className="text-3xl md:text-4xl font-serif text-sand mb-4 relative z-10">Unique Experiences</h3>
