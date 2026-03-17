@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Leaf } from 'lucide-react';
+import SmartImage from '../UI/SmartImage';
 
 export default function Footer() {
     return (
@@ -8,7 +9,7 @@ export default function Footer() {
                 {/* Brand & Newsletter */}
                 <div className="flex flex-col gap-6">
                     <Link to="/" className="flex items-center">
-                        <img
+                        <SmartImage
                             src="/trip-2-island/assets/logo-light.png"
                             alt="Trip2Island Logo"
                             className="lg:h-13 h-13 w-auto object-contain mb-2"

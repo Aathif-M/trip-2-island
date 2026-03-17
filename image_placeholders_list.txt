@@ -1,39 +1,41 @@
+[NOTE: All images in the project now use the <SmartImage> component. This means you can save your images as .jpg, .png, OR .webp using the exact filenames listed below. The code will automatically find the file regardless of which extension you use.]
+
 Homepage (EssenceOfSriLanka.jsx) - 5 Images:
-1. Gems & Pearls: Close-up of authentic Sri Lankan Sapphires and Pearls
-2. Food & Cuisine: Close-up of authentic Sri Lankan Rice & Curry in clay pots
-3. Culture & Festivals: Traditional Kandy Esala Perahera dancers in vibrant costumes
-4. Ayurveda & Wellness: Relaxing Ayurveda spa setup with herbal oils and lotus flowers
-5. Friendly People & Hospitality: Smiling locals greeting with traditional Ayubowan gesture
+1. Gems & Pearls: Close-up of authentic Sri Lankan Sapphires and Pearls -> essence-gems.jpg
+2. Food & Cuisine: Close-up of authentic Sri Lankan Rice & Curry in clay pots -> essence-food.jpg
+3. Culture & Festivals: Traditional Kandy Esala Perahera dancers in vibrant costumes -> essence-culture.jpg
+4. Ayurveda & Wellness: Relaxing Ayurveda spa setup with herbal oils and lotus flowers -> essence-ayurveda.jpg
+5. Friendly People & Hospitality: Smiling locals greeting with traditional Ayubowan gesture -> essence-people.jpg
 
 Experiences Page (ExperiencesPage.jsx) - 1 Video, 20 Images:
 
 Hero Section:
-1. Hero Background Video: Drone footage panning over the Nine Arches Bridge
+1. Hero Background Video: Drone footage panning over the Nine Arches Bridge -> page-experiences.mp4
 
 Experience Cards:
-1. Sigiriya: Majestic view of Sigiriya Lion Rock rising from the jungle
-2. Train Ride: Blue train curving through green tea estates
-3. Yala Safari: Leopard resting on a tree branch in Yala
-4. Whale Watching: Tail of a blue whale diving into the deep ocean
-5. Tea Plantation: Tea pluckers working in beautifully terraced green hills
-6. Esala Perahera: Illuminated elephants and fire dancers at night
-7. Adam's Peak: Spectacular sunrise view from the summit of Adam’s Peak
-8. Dambulla Cave: Stunning golden statues lining the dimly lit cave
-9. Surfing Arugam Bay: Surfer catching a golden hour wave in Arugam Bay
-10. Galle Fort: Historic lighthouse of Galle Fort against a blue sky
-11. Udawalawe Safari: Large herd of elephants gathering by a waterhole
-12. Diyaluma Waterfall: Crystal clear natural pools at the edge of Diyaluma Falls
-13. Rice & Curry: Spread of vibrant Sri Lankan curries served in traditional clay pots
-14. Lagoon Safari: Small boat navigating through a dense green mangrove tunnel
-15. Temple of the Tooth: White temple complex of the Tooth Relic reflecting on the lake
-16. Horton Plains: Misty morning view over the dramatic precipice of World’s End
-17. Kosgoda Turtles: Baby sea turtles making their way to the ocean
-18. Village Tour: Locals cooking a wood-fired meal in a mud-hut village
-19. Gem Mining: Traditional gem miners washing gravel in wicker baskets
-20. Nine Arches Bridge: The majestic stone arches of the bridge spanning a lush gorge
+1. Sigiriya: Majestic view of Sigiriya Lion Rock rising from the jungle -> exp-sigiriya.jpg
+2. Train Ride: Blue train curving through green tea estates -> exp-train.jpg
+3. Yala Safari: Leopard resting on a tree branch in Yala -> exp-yala.jpg
+4. Whale Watching: Tail of a blue whale diving into the deep ocean -> exp-whale.jpg
+5. Tea Plantation: Tea pluckers working in beautifully terraced green hills -> exp-tea.jpg
+6. Esala Perahera: Illuminated elephants and fire dancers at night -> exp-perahera.jpg
+7. Adam's Peak: Spectacular sunrise view from the summit of Adam’s Peak -> exp-adams-peak.jpg
+8. Dambulla Cave: Stunning golden statues lining the dimly lit cave -> exp-dambulla.jpg
+9. Surfing Arugam Bay: Surfer catching a golden hour wave in Arugam Bay -> exp-surfing.jpg
+10. Galle Fort: Historic lighthouse of Galle Fort against a blue sky -> exp-galle.jpg
+11. Udawalawe Safari: Large herd of elephants gathering by a waterhole -> exp-udawalawe.jpg
+12. Diyaluma Waterfall: Crystal clear natural pools at the edge of Diyaluma Falls -> exp-diyaluma.jpg
+13. Rice & Curry: Spread of vibrant Sri Lankan curries served in traditional clay pots -> exp-cuisine.jpg
+14. Lagoon Safari: Small boat navigating through a dense green mangrove tunnel -> exp-lagoon.jpg
+15. Temple of the Tooth: White temple complex of the Tooth Relic reflecting on the lake -> exp-temple-tooth.jpg
+16. Horton Plains: Misty morning view over the dramatic precipice of World’s End -> exp-horton.jpg
+17. Kosgoda Turtles: Baby sea turtles making their way to the ocean -> exp-turtles.jpg
+18. Village Tour: Locals cooking a wood-fired meal in a mud-hut village -> exp-village.jpg
+19. Gem Mining: Traditional gem miners washing gravel in wicker baskets -> exp-gems.jpg
+20. Nine Arches Bridge: The majestic stone arches of the bridge spanning a lush gorge -> exp-nine-arches.jpg
 
 Colombo City Life (ColomboCityLife.jsx) - 4 Images:
-1. Luxury City Hotels: Glowing luxury hotel pool overlooking the Indian Ocean at dusk
-2. The Port City: Architectural wide-shot of the glowing Port City marina and skyline
-3. Entertainment & Lifestyle: Vibrant evening shot of the illuminated Lotus Tower and city traffic
-4. Spiritual Sanctuaries: Serene photo of Gangaramaya Temple illuminated at night, reflecting on the lake
+1. Luxury City Hotels: Glowing luxury hotel pool overlooking the Indian Ocean at dusk -> colombo-hotels.jpg
+2. The Port City: Architectural wide-shot of the glowing Port City marina and skyline -> colombo-port.jpg
+3. Entertainment & Lifestyle: Vibrant evening shot of the illuminated Lotus Tower and city traffic -> colombo-lifestyle.jpg
+4. Spiritual Sanctuaries: Serene photo of Gangaramaya Temple illuminated at night, reflecting on the lake -> colombo-spiritual.jpg

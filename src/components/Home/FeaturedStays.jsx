@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SmartImage from '../UI/SmartImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,7 +84,7 @@ export default function FeaturedStays() {
 
                             {/* Image Container */}
                             <div className="w-full lg:w-3/5 h-[40vh] sm:h-[50vh] lg:h-[75vh] overflow-hidden rounded-2xl relative">
-                                <img
+                                <SmartImage
                                     src={stay.img}
                                     alt={stay.title}
                                     className="absolute inset-0 w-full h-[120%] -top-[10%] object-cover"

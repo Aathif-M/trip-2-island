@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import gsap from 'gsap';
+import SmartImage from '../UI/SmartImage';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +102,7 @@ export default function Navbar() {
                 <div className="container mx-auto px-6 xl:px-8 flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="flex items-center relative z-50">
-                        <img
+                        <SmartImage
                             ref={logoRef}
                             src="/trip-2-island/assets/logo.png"
                             alt="trip2island logo"

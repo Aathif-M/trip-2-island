@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SmartImage from '../UI/SmartImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,7 +86,7 @@ export default function DestinationsGrid() {
                             key={idx}
                             className={`bento-item group relative overflow-hidden rounded-2xl cursor-pointer bg-primary/5 block ${region.colSpan} ${region.rowSpan} ${region.aspect}`}
                         >
-                            <img
+                            <SmartImage
                                 src={region.img}
                                 alt={region.name}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-80 group-hover:opacity-100"

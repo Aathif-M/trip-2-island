@@ -1,4 +1,5 @@
 import { Users, Heart, ShieldCheck } from 'lucide-react';
+import SmartImage from '../components/UI/SmartImage';
 
 export default function About() {
     return (
@@ -6,7 +7,7 @@ export default function About() {
             {/* Hero Section */}
             <section className="h-screen w-full relative flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <SmartImage
                         src="/trip-2-island/assets/page-about.jpg"
                         alt="Local guide in Sri Lanka"
                         className="w-full h-full object-cover"

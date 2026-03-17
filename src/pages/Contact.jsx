@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import SmartImage from '../components/UI/SmartImage';
 
 export default function Contact() {
     return (
@@ -83,7 +84,7 @@ export default function Contact() {
                         </div>
 
                         <div className="flex-grow rounded-3xl overflow-hidden relative min-h-[250px] bg-primary/20 flex items-center justify-center text-primary/50 shadow-inner">
-                            <img
+                            <SmartImage
                                 src="/trip-2-island/assets/page-contact.jpg"
                                 alt="Sri Lanka Beach"
                                 className="w-full h-full object-cover"

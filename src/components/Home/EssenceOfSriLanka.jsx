@@ -2,15 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import SmartImage from '../UI/SmartImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
-    { title: "Gems & Pearls", placeholder: "Close-up of authentic Sri Lankan Sapphires and Pearls", size: "col-span-12 md:col-span-4 row-span-2" },
-    { title: "Food & Cuisine", placeholder: "Close-up of authentic Sri Lankan Rice & Curry in clay pots", size: "col-span-12 md:col-span-8 row-span-1" },
-    { title: "Culture & Festivals", placeholder: "Traditional Kandy Esala Perahera dancers in vibrant costumes", size: "col-span-12 md:col-span-4 row-span-1" },
-    { title: "Ayurveda & Wellness", placeholder: "Relaxing Ayurveda spa setup with herbal oils and lotus flowers", size: "col-span-12 md:col-span-4 row-span-1" },
-    { title: "Friendly People & Hospitality", placeholder: "Smiling locals greeting with traditional Ayubowan gesture", size: "col-span-12 md:col-span-6 row-span-2" },
+    { title: "Gems & Pearls", placeholder: "Close-up of authentic Sri Lankan Sapphires and Pearls", size: "col-span-12 md:col-span-4 row-span-2", img: "/trip-2-island/assets/essence-gems.jpg" },
+    { title: "Food & Cuisine", placeholder: "Close-up of authentic Sri Lankan Rice & Curry in clay pots", size: "col-span-12 md:col-span-8 row-span-1", img: "/trip-2-island/assets/essence-food.jpg" },
+    { title: "Culture & Festivals", placeholder: "Traditional Kandy Esala Perahera dancers in vibrant costumes", size: "col-span-12 md:col-span-4 row-span-1", img: "/trip-2-island/assets/essence-culture.jpg" },
+    { title: "Ayurveda & Wellness", placeholder: "Relaxing Ayurveda spa setup with herbal oils and lotus flowers", size: "col-span-12 md:col-span-4 row-span-1", img: "/trip-2-island/assets/essence-ayurveda.jpg" },
+    { title: "Friendly People & Hospitality", placeholder: "Smiling locals greeting with traditional Ayubowan gesture", size: "col-span-12 md:col-span-6 row-span-2", img: "/trip-2-island/assets/essence-people.jpg" },
 ];
 
 export default function EssenceOfSriLanka() {
@@ -54,9 +55,11 @@ export default function EssenceOfSriLanka() {
                             ref={el => cardsRef.current[index] = el}
                             className={`group cursor-pointer relative overflow-hidden rounded-xl ${pillar.size} bg-sand/10`}
                         >
-                            <div className="absolute inset-0 bg-[#E6E9E3] scale-105 transition-transform duration-700 ease-out group-hover:scale-100 flex items-center justify-center p-6 text-center text-sm font-sans text-slate-500">
-                                {pillar.placeholder}
-                            </div>
+                            <SmartImage
+                                src={pillar.img}
+                                alt={pillar.title}
+                                className="absolute inset-0 w-full h-full object-cover scale-105 transition-transform duration-700 ease-out group-hover:scale-100 opacity-80 group-hover:opacity-100"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex flex-col justify-end p-6">
                                 <h3 className="text-2xl font-serif text-sand mb-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{pillar.title}</h3>
                             </div>

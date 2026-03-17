@@ -1,3 +1,5 @@
+import SmartImage from '../components/UI/SmartImage';
+
 export default function Itineraries() {
     return (
         <div className="bg-sand text-primary min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-12 flex flex-col items-center justify-center text-center">
@@ -8,7 +10,7 @@ export default function Itineraries() {
                 </p>
             </div>
             <div className="w-full h-[60vh] bg-primary/20 rounded-3xl overflow-hidden relative shadow-2xl max-w-5xl">
-                <img
+                <SmartImage
                     src="/trip-2-island/assets/page-itineraries.jpg"
                     alt="Cultural Triangle"
                     className="w-full h-full object-cover opacity-80"
