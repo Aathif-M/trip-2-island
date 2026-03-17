@@ -9,6 +9,7 @@ import Terms from './pages/Terms';
 import Itineraries from './pages/Itineraries';
 import PlacesToStay from './pages/PlacesToStay';
 import Journal from './pages/Journal';
+import ExperiencesPage from './pages/ExperiencesPage';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/journal" element={<Journal />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/terms" element={<Terms />} />
+                    <Route path="/experiences" element={<ExperiencesPage />} />
                 </Routes>
             </Layout>
         </Router>
