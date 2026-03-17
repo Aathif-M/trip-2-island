@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mountain, TrainFront, Camera, Droplet, Leaf, Music, Sunrise, Tent, Wind, MapPin, TreePine, Umbrella, Coffee, Ship, Landmark, Map, Fish, Home, Diamond, ArrowRight } from 'lucide-react';
+import SmartVideo from '../components/UI/SmartVideo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,12 +55,14 @@ export default function ExperiencesPage() {
             {/* Hero Section */}
             <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-primary">
                 <div className="absolute inset-0 bg-[#1C4130] opacity-80 z-10"></div>
-                {/* Video Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center text-center p-8 z-0">
-                    <span className="text-sand/50 font-sans tracking-widest uppercase">
-                        [PLACEHOLDER: Drone footage panning over the Nine Arches Bridge]
-                    </span>
-                </div>
+                <SmartVideo
+                    src="/trip-2-island/assets/page-experiences.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                />
 
                 <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-serif text-sand mb-6">20 Reasons to Choose Sri Lanka</h1>

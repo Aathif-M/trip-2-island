@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import SmartImage from '../UI/SmartImage';
+import SmartVideo from '../UI/SmartVideo';
 
 const slides = [
     { type: 'image', src: '/trip-2-island/assets/slider-1.jpg' },
@@ -72,7 +73,7 @@ export default function Hero() {
                             className={`w-full h-full ${index === currentSlide ? 'slide-zoom' : ''}`}
                         >
                             {slide.type === 'video' ? (
-                                <video
+                                <SmartVideo
                                     src={slide.src}
                                     poster={slide.poster}
                                     autoPlay
