@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SmartImage from '../UI/SmartImage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,25 +9,25 @@ const pillarsData = [
     {
         title: "Luxury City Hotels",
         description: "Experience the epitome of metropolitan luxury. From historic colonial landmarks that have hosted royalty to soaring modern high-rises with sweeping views of the Indian Ocean, Colombo’s hospitality blends old-world charm with contemporary elegance. Unwind in ocean-facing suites or sip evening cocktails by aglow infinity pools as the sun dips below the horizon.",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image: "/trip-2-island/assets/colombo-hotels.jpg",
         reverse: false
     },
     {
         title: "The Port City",
         description: "Step into the future of Sri Lanka. Built on reclaimed land, the Port City represents a daring architectural leap. Stroll along modern marinas, expansive walkways, and lush urban parks that frame a growing skyline. As night falls, the metropolis glows, casting futuristic reflections across the bay.",
-        image: "https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image: "/trip-2-island/assets/colombo-port.jpg",
         reverse: true
     },
     {
         title: "Entertainment & Lifestyle",
         description: "When the island sun sets, Colombo comes alive. Indulge in designer retail therapy at luxury hubs like One Galle Face, or explore a thriving culinary and cafe culture that weaves through the city's arteries. Crown your evening at exclusive rooftop bars, gazing out at the illuminated Lotus Tower piercing the night sky.",
-        image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image: "/trip-2-island/assets/colombo-lifestyle.jpg",
         reverse: false
     },
     {
         title: "Spiritual Sanctuaries",
         description: "Amidst the metropolitan rush lies profound serenity. Architectural marvels like the iconic Gangaramaya Temple sit peacefully on the waters of Beira Lake. Ornate carvings, golden stupas, and glowing lanterns reflect perfectly in the calm waters—a reminder of the deep spiritual roots that anchor this ever-evolving city.",
-        image: "https://images.unsplash.com/photo-1600151121852-6e210ac571c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        image: "/trip-2-island/assets/colombo-spiritual.jpg",
         reverse: true
     }
 ];
@@ -154,7 +155,7 @@ const ColomboCityLife = () => {
                         <div className={`image-container relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden rounded-2xl bg-[#143023] shadow-2xl ${pillar.reverse ? 'order-1 lg:order-1' : 'order-1 lg:order-2'} will-change-transform`}>
                             {/* Inner element is larger to allow parallax */}
                             <div className="absolute inset-0 w-full h-[130%] -top-[15%]">
-                                <img
+                                <SmartImage
                                     src={pillar.image}
                                     alt={pillar.title}
                                     className="parallax-image object-cover w-full h-full will-change-transform"
