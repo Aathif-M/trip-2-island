@@ -38,6 +38,7 @@ export default function Chatbot() {
     const [isTyping, setIsTyping] = useState(false);
 
     const messagesEndRef = useRef(null);
+    const chatRef = useRef(null);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -48,6 +49,16 @@ export default function Chatbot() {
             scrollToBottom();
         }
     }, [messages, isTyping, isOpen]);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (isOpen && chatRef.current && !chatRef.current.contains(e.target)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [isOpen]);
 
     const handleSend = (e) => {
         e.preventDefault();
@@ -78,7 +89,7 @@ export default function Chatbot() {
     };
 
     return (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <div ref={chatRef} className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
             {/* Chat Interface */}
             {isOpen && (
                 <div className="mb-4 w-80 sm:w-96 bg-sand border border-primary/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col origin-bottom-right transition-all duration-300 transform scale-100 opacity-100 h-[500px] max-h-[80vh]">
