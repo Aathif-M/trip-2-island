@@ -5,6 +5,10 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
+        fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Quicksand"', 'sans-serif'],
+        },
         extend: {
             colors: {
                 primary: "#1A3628", // Deep Forest Green
@@ -12,10 +16,6 @@ export default {
                 accent: "#C0573E",  // Terracotta
                 ocean: "#244C5A",   // Ocean Blue
                 gold: "#D4AF37",    // Soft Gold
-            },
-            fontFamily: {
-                serif: ['"Cormorant Garamond"', 'serif'],
-                sans: ['"Quicksand"', 'sans-serif'],
             },
             flex: {
                 '2': '2 2 0%'
