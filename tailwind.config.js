@@ -15,7 +15,7 @@ export default {
             },
             fontFamily: {
                 serif: ['"Cormorant Garamond"', 'serif'],
-                sans: ['"Montserrat"', 'sans-serif'],
+                sans: ['"Quicksand"', 'sans-serif'],
             },
             flex: {
                 '2': '2 2 0%'

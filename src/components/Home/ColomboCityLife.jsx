@@ -95,9 +95,6 @@ const ColomboCityLife = () => {
         return () => ctx.revert();
     }, []);
 
-    const headingFont = { fontFamily: "'Playfair Display', serif" };
-    const bodyFont = { fontFamily: "'Inter', sans-serif" };
-
     return (
         <section ref={sectionRef} className="bg-[#1C4130] py-24 lg:py-40 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 lg:space-y-48">
@@ -105,12 +102,12 @@ const ColomboCityLife = () => {
                 {/* 1. Section Header Pillar */}
                 <div className="pillar-text-container text-center max-w-4xl mx-auto">
                     <div className="overflow-hidden mb-6">
-                        <h2 style={headingFont} className="reveal-text pb-2 text-4xl md:text-6xl lg:text-7xl text-[#C8AC5F] leading-tight">
+                        <h2 className="reveal-text font-serif pb-2 text-4xl md:text-6xl lg:text-7xl text-[#C8AC5F] leading-tight">
                             The Heartbeat of the Island:<br />Discover Colombo
                         </h2>
                     </div>
                     <div className="overflow-hidden">
-                        <p style={bodyFont} className="reveal-text text-xl md:text-2xl text-[#FAF8F3] font-light">
+                        <p className="reveal-text text-xl md:text-2xl text-[#FAF8F3] font-light">
                             Where colonial heritage meets a futuristic skyline.
                         </p>
                     </div>
@@ -128,19 +125,19 @@ const ColomboCityLife = () => {
                         <div className={`pillar-text-container flex flex-col justify-center ${pillar.reverse ? 'order-2 lg:order-2' : 'order-2 lg:order-1'}`}>
                             {/* Decorative Subheading / Sequence (optional minimal accent) */}
                             <div className="overflow-hidden mb-4">
-                                <span style={bodyFont} className="reveal-text text-[#B05B40] tracking-[0.2em] text-sm uppercase font-bold">
+                                <span className="reveal-text text-[#B05B40] tracking-[0.2em] text-sm uppercase font-bold">
                                     0{index + 1} // Colombo City
                                 </span>
                             </div>
                             
                             <div className="overflow-hidden mb-6 pb-2">
-                                <h3 style={headingFont} className="reveal-text text-4xl md:text-5xl text-[#C8AC5F] leading-snug">
+                                <h3 className="reveal-text font-serif text-4xl md:text-5xl text-[#C8AC5F] leading-snug">
                                     {pillar.title}
                                 </h3>
                             </div>
                             
                             <div className="overflow-hidden">
-                                <p style={bodyFont} className="reveal-text text-[#FAF8F3] text-lg md:text-xl font-light leading-relaxed">
+                                <p className="reveal-text text-[#FAF8F3] text-lg md:text-xl font-light leading-relaxed">
                                     {pillar.description}
                                 </p>
                             </div>
