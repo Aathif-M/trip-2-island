@@ -9,17 +9,21 @@ export default function PageTransition({ children }) {
     const panelTopRef = useRef(null);
     const panelBotRef = useRef(null);
     const logoRef = useRef(null);
-    const isFirstRender = useRef(true);
     const timelineRef = useRef(null);
 
+    // Track the previous path — only animate when the path genuinely changes
+    const prevPathRef = useRef(location.pathname);
+
     useEffect(() => {
-        // Skip on first mount — LoadingScreen handles initial load
-        if (isFirstRender.current) {
-            isFirstRender.current = false;
+        // If the path hasn't actually changed (initial mount or Strict Mode double-invoke), skip
+        if (prevPathRef.current === location.pathname) {
             return;
         }
 
-        // Kill any previous running timeline to avoid overlap
+        // Update previous path
+        prevPathRef.current = location.pathname;
+
+        // Kill any previous animation to prevent overlap
         if (timelineRef.current) timelineRef.current.kill();
 
         const overlay = overlayRef.current;
@@ -37,7 +41,7 @@ export default function PageTransition({ children }) {
         timelineRef.current = tl;
 
         tl
-            // Curtains slide in to cover the screen
+            // Curtains close in
             .to([panelTop, panelBot], {
                 yPercent: 0,
                 duration: 0.5,
@@ -50,15 +54,15 @@ export default function PageTransition({ children }) {
                 duration: 0.3,
                 ease: 'power2.out',
             }, '-=0.1')
-            // Brief hold so new page can paint behind the overlay
-            .to({}, { duration: 0.25 })
+            // Brief hold for new page to render
+            .to({}, { duration: 0.3 })
             // Logo fades out
             .to(logo, {
                 opacity: 0,
                 duration: 0.2,
                 ease: 'power2.in',
             })
-            // Curtains split back open to reveal the new page
+            // Curtains split open
             .to(panelTop, {
                 yPercent: -100,
                 duration: 0.55,
@@ -77,10 +81,9 @@ export default function PageTransition({ children }) {
 
     return (
         <>
-            {/* Page content — always rendered by React Router */}
             {children}
 
-            {/* Transition overlay — pure GSAP controlled, sits above everything */}
+            {/* Transition curtain overlay */}
             <div
                 ref={overlayRef}
                 className="fixed inset-0 z-[9998] pointer-events-none"
