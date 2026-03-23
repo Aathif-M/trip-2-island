@@ -12,6 +12,7 @@ import PlacesToStay from './pages/PlacesToStay';
 import Journal from './pages/Journal';
 import ExperiencesPage from './pages/ExperiencesPage';
 import LoadingScreen from './components/UI/LoadingScreen';
+import PageTransition from './components/UI/PageTransition';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -21,20 +22,22 @@ function App() {
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             <div style={{ visibility: isLoading ? 'hidden' : 'visible' }}>
                 <Router basename="/trip-2-island">
-                    <Layout>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/destinations/sri-lanka" element={<Destinations />} />
-                            <Route path="/contact" element={<Contact />} />
-                            <Route path="/itineraries" element={<Itineraries />} />
-                            <Route path="/places-to-stay" element={<PlacesToStay />} />
-                            <Route path="/journal" element={<Journal />} />
-                            <Route path="/faq" element={<FAQ />} />
-                            <Route path="/terms" element={<Terms />} />
-                            <Route path="/experiences" element={<ExperiencesPage />} />
-                        </Routes>
-                    </Layout>
+                    <PageTransition>
+                        <Layout>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/about" element={<About />} />
+                                <Route path="/destinations/sri-lanka" element={<Destinations />} />
+                                <Route path="/contact" element={<Contact />} />
+                                <Route path="/itineraries" element={<Itineraries />} />
+                                <Route path="/places-to-stay" element={<PlacesToStay />} />
+                                <Route path="/journal" element={<Journal />} />
+                                <Route path="/faq" element={<FAQ />} />
+                                <Route path="/terms" element={<Terms />} />
+                                <Route path="/experiences" element={<ExperiencesPage />} />
+                            </Routes>
+                        </Layout>
+                    </PageTransition>
                 </Router>
             </div>
         </>
