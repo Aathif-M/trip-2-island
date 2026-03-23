@@ -139,7 +139,7 @@ export default function Contact() {
                                 <MapPin className="w-6 h-6 text-accent shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-base sm:text-lg mb-1">Head Office</h4>
-                                    <p className="text-sand/70 text-sm sm:text-base">123 Ocean Drive, Colombo 03<br />Sri Lanka</p>
+                                    <p className="text-sand/70 text-sm sm:text-base">124 Ocean Drive, Colombo 03<br />Sri Lanka</p>
                                 </div>
                             </div>
 

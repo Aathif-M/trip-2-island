@@ -52,7 +52,7 @@ export default function Footer() {
                     <h4 className="font-serif text-xl font-medium mb-2">Get in Touch</h4>
                     <div className="flex items-start gap-3 text-sand/70 text-sm">
                         <MapPin className="w-5 h-5 shrink-0 text-accent" />
-                        <p>123 Ocean Drive,<br />Colombo 03, Sri Lanka</p>
+                        <p>124 Ocean Drive,<br />Colombo 03, Sri Lanka</p>
                     </div>
                     <div className="flex items-center gap-3 text-sand/70 text-sm">
                         <Phone className="w-5 h-5 shrink-0 text-accent" />
