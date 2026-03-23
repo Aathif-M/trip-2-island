@@ -13,11 +13,13 @@ import Journal from './pages/Journal';
 import ExperiencesPage from './pages/ExperiencesPage';
 import LoadingScreen from './components/UI/LoadingScreen';
 import PageTransition from './components/UI/PageTransition';
+import CustomCursor from './components/UI/CustomCursor';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
     return (
         <>
+            <CustomCursor />
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             <Router basename="/trip-2-island">
                     <PageTransition>

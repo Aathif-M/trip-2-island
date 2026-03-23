@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    cursor: none !important;
+  }
+
   html.lenis {
     height: auto;
   }
