@@ -79,11 +79,11 @@ export default function LoadingScreen({ onComplete }) {
                 {/* Decorative lines + Logo row */}
                 <div className="flex items-center gap-4">
                     <div ref={lineLeftRef} className="h-[1px] w-20 bg-accent/50 origin-right scale-x-0" />
-                    <div ref={logoRef} className="opacity-0">
+                    <div ref={logoRef} className="opacity-0 overflow-hidden h-10 flex items-start">
                         <SmartImage
                             src="/trip-2-island/assets/logo-light.png"
                             alt="Trip2Island"
-                            className="h-14 w-auto object-contain"
+                            className="h-14 w-auto object-contain object-top"
                         />
                     </div>
                     <div ref={lineRightRef} className="h-[1px] w-20 bg-accent/50 origin-left scale-x-0" />

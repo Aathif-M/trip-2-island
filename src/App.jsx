@@ -16,12 +16,10 @@ import PageTransition from './components/UI/PageTransition';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
-
     return (
         <>
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-            <div style={{ visibility: isLoading ? 'hidden' : 'visible' }}>
-                <Router basename="/trip-2-island">
+            <Router basename="/trip-2-island">
                     <PageTransition>
                         <Layout>
                             <Routes>
@@ -39,7 +37,6 @@ function App() {
                         </Layout>
                     </PageTransition>
                 </Router>
-            </div>
         </>
     );
 }

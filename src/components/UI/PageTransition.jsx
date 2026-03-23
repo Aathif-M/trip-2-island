@@ -1,10 +1,20 @@
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import SmartImage from './SmartImage';
 
 export default function PageTransition({ children }) {
     const location = useLocation();
+    
+    // The state that actually renders to the screen.
+    // Initialized with whatever children are provided on mount.
+    const [displayChildren, setDisplayChildren] = useState(children);
+    
+    // We use a ref to keep track of the LATEST children passed from App.jsx,
+    // but we ONLY sync them to the `displayChildren` state when the curtains are closed.
+    const latestChildrenRef = useRef(children);
+    latestChildrenRef.current = children;
+
     const overlayRef = useRef(null);
     const panelTopRef = useRef(null);
     const panelBotRef = useRef(null);
@@ -12,19 +22,22 @@ export default function PageTransition({ children }) {
     const timelineRef = useRef(null);
     const prevPathRef = useRef(location.pathname);
 
-    // Hide the overlay immediately before first paint — GSAP owns `visibility` from here on.
-    // We do NOT put visibility/display in the React style prop, otherwise React re-renders
-    // will reset any GSAP changes made during the animation.
+    // Initial setup — hide over to GSAP control
     useLayoutEffect(() => {
         gsap.set(overlayRef.current, { autoAlpha: 0, pointerEvents: 'none' });
     }, []);
 
     useEffect(() => {
-        // Skip if the path hasn't genuinely changed (initial mount / StrictMode double-invoke)
-        if (prevPathRef.current === location.pathname) return;
+        // If the route hasn't genuinely changed, just sync the content immediately 
+        // (to handle internal re-renders or state updates within the current page)
+        if (prevPathRef.current === location.pathname) {
+            setDisplayChildren(children);
+            return;
+        }
+
+        // Start the transition
         prevPathRef.current = location.pathname;
 
-        // Kill any currently running transition
         if (timelineRef.current) timelineRef.current.kill();
 
         const overlay = overlayRef.current;
@@ -32,7 +45,7 @@ export default function PageTransition({ children }) {
         const panelBot = panelBotRef.current;
         const logo = logoRef.current;
 
-        // Reset panel and logo positions, make overlay interactive
+        // Reset positions
         gsap.set(panelTop, { yPercent: -100 });
         gsap.set(panelBot, { yPercent: 100 });
         gsap.set(logo, { opacity: 0, y: 8 });
@@ -42,28 +55,33 @@ export default function PageTransition({ children }) {
         timelineRef.current = tl;
 
         tl
-            // Curtains close in from top and bottom
+            // 1. Curtains drop IN, covering the OLD page
             .to([panelTop, panelBot], {
                 yPercent: 0,
                 duration: 0.5,
                 ease: 'expo.inOut',
             })
-            // Logo appears at the center seam
+            // 2. Once curtains are fully closed (completing first .to above),
+            // we swap the React state to render the NEW page under the cover.
+            .add(() => {
+                setDisplayChildren(latestChildrenRef.current);
+            })
+            // 3. Logo appears while the new page finishes painting behind the curtain
             .to(logo, {
                 opacity: 1,
                 y: 0,
                 duration: 0.3,
                 ease: 'power2.out',
-            }, '-=0.1')
-            // Brief hold while new page renders behind
-            .to({}, { duration: 0.3 })
-            // Logo fades out
+            }, '+=0.05')
+            // 4. Brief hold
+            .to({}, { duration: 0.4 })
+            // 5. Logo fades out
             .to(logo, {
                 opacity: 0,
                 duration: 0.2,
                 ease: 'power2.in',
             })
-            // Curtains split back open
+            // 6. Curtains split OUT, revealing the NEW page flawlessly
             .to(panelTop, {
                 yPercent: -100,
                 duration: 0.55,
@@ -74,30 +92,27 @@ export default function PageTransition({ children }) {
                 duration: 0.55,
                 ease: 'expo.inOut',
             }, '<')
-            // Hide overlay again — GSAP-managed, not React-managed
             .set(overlay, { autoAlpha: 0, pointerEvents: 'none' });
 
-    }, [location.pathname]);
+    }, [location.pathname]); // We ONLY trigger on path change
 
     return (
         <>
-            {children}
+            {/* The actual page content — buffered in state until curtains shut! */}
+            {displayChildren}
 
-            {/* 
-                Transition curtain — visibility is managed entirely by GSAP.
-                No display/visibility in React style props to avoid React overriding GSAP.
-            */}
+            {/* Transition curtain overlay */}
             <div ref={overlayRef} className="fixed inset-0 z-[9998]">
                 {/* Top curtain */}
                 <div
                     ref={panelTopRef}
                     className="absolute top-0 left-0 right-0 h-1/2 bg-primary flex items-end justify-center pb-4"
                 >
-                    <div ref={logoRef} className="relative z-10">
+                    <div ref={logoRef} className="relative z-10 h-10 overflow-hidden flex items-start">
                         <SmartImage
                             src="/trip-2-island/assets/logo-light.png"
                             alt="Trip2Island"
-                            className="h-10 w-auto object-contain"
+                            className="h-14 w-auto object-contain object-top"
                         />
                     </div>
                 </div>
