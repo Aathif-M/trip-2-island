@@ -60,13 +60,11 @@ export default function PageTransition({ children }) {
                 yPercent: 0,
                 duration: 0.5,
                 ease: 'expo.inOut',
+                onComplete: () => {
+                    setDisplayChildren(latestChildrenRef.current);
+                }
             })
-            // 2. Once curtains are fully closed (completing first .to above),
-            // we swap the React state to render the NEW page under the cover.
-            .add(() => {
-                setDisplayChildren(latestChildrenRef.current);
-            })
-            // 3. Logo appears while the new page finishes painting behind the curtain
+            // 2. Logo appears while the new page finishes painting behind the curtain
             .to(logo, {
                 opacity: 1,
                 y: 0,
@@ -108,11 +106,11 @@ export default function PageTransition({ children }) {
                     ref={panelTopRef}
                     className="absolute top-0 left-0 right-0 h-1/2 bg-primary flex items-end justify-center pb-4"
                 >
-                    <div ref={logoRef} className="relative z-10 h-10 overflow-hidden flex items-start">
+                    <div ref={logoRef} className="relative z-10">
                         <SmartImage
                             src="/trip-2-island/assets/logo-light.png"
                             alt="Trip2Island"
-                            className="h-14 w-auto object-contain object-top"
+                            className="h-14 w-auto object-contain"
                         />
                     </div>
                 </div>
