@@ -16,6 +16,7 @@ export default function PageTransition({ children }) {
     latestChildrenRef.current = children;
 
     const overlayRef = useRef(null);
+    const whiteScreenRef = useRef(null);
     const panelTopRef = useRef(null);
     const panelBotRef = useRef(null);
     const logoRef = useRef(null);
@@ -24,7 +25,7 @@ export default function PageTransition({ children }) {
 
     // Initial setup — hide over to GSAP control
     useLayoutEffect(() => {
-        gsap.set(overlayRef.current, { autoAlpha: 0, pointerEvents: 'none' });
+        gsap.set([overlayRef.current, whiteScreenRef.current], { autoAlpha: 0, pointerEvents: 'none' });
     }, []);
 
     useEffect(() => {
@@ -44,8 +45,10 @@ export default function PageTransition({ children }) {
         const panelTop = panelTopRef.current;
         const panelBot = panelBotRef.current;
         const logo = logoRef.current;
+        const whiteScreen = whiteScreenRef.current;
 
-        // Reset positions
+        // Immediately show the white screen, reset panels and logo
+        gsap.set(whiteScreen, { autoAlpha: 1, pointerEvents: 'all' });
         gsap.set(panelTop, { yPercent: -100 });
         gsap.set(panelBot, { yPercent: 100 });
         gsap.set(logo, { opacity: 0, y: 8 });
@@ -55,13 +58,16 @@ export default function PageTransition({ children }) {
         timelineRef.current = tl;
 
         tl
-            // 1. Curtains drop IN, covering the OLD page
+            // 1. Curtains drop IN, covering the WHITE screen
             .to([panelTop, panelBot], {
                 yPercent: 0,
                 duration: 0.5,
                 ease: 'expo.inOut',
                 onComplete: () => {
+                    // Update the React DOM to the NEW page behind the curtains
                     setDisplayChildren(latestChildrenRef.current);
+                    // Hide the white screen so the new page is waiting when curtains open
+                    gsap.set(whiteScreen, { autoAlpha: 0, pointerEvents: 'none' });
                 }
             })
             // 2. Logo appears while the new page finishes painting behind the curtain
@@ -99,8 +105,11 @@ export default function PageTransition({ children }) {
             {/* The actual page content — buffered in state until curtains shut! */}
             {displayChildren}
 
+            {/* Instant white screen overlay */}
+            <div ref={whiteScreenRef} className="fixed inset-0 z-[9997] bg-white pointer-events-none" />
+
             {/* Transition curtain overlay */}
-            <div ref={overlayRef} className="fixed inset-0 z-[9998]">
+            <div ref={overlayRef} className="fixed inset-0 z-[9998] pointer-events-none">
                 {/* Top curtain */}
                 <div
                     ref={panelTopRef}
