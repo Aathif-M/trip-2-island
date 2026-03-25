@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    cursor: none !important;
+  @media (hover: hover) and (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
   }
 
   html.lenis {
@@ -42,7 +44,7 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .glass {
     @apply bg-sand/80 backdrop-blur-md border-b border-primary/10;
   }

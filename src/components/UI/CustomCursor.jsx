@@ -5,8 +5,21 @@ const CustomCursor = () => {
   const cursorRef = useRef(null);
   const followerRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+    setIsDesktop(mediaQuery.matches);
+    
+    const handler = (e) => setIsDesktop(e.matches);
+    // Compatibility for older browsers requires addListener instead of addEventListener sometimes, but addEventListener is standard now
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
+
     const cursor = cursorRef.current;
     const follower = followerRef.current;
 
@@ -83,7 +96,9 @@ const CustomCursor = () => {
         el.removeEventListener('mouseleave', handleHoverLeave);
       });
     };
-  }, []);
+  }, [isDesktop]);
+
+  if (!isDesktop) return null;
 
   return (
     <>
