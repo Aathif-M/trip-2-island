@@ -21,23 +21,23 @@ export default function LoadingScreen({ onComplete }) {
             { scaleX: 0 },
             { scaleX: 1, duration: 0.6, ease: 'power2.inOut' }
         )
-        // Logo fades up
-        .fromTo(logoRef.current,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' },
-            '-=0.2'
-        )
-        // Progress track appears
-        .fromTo(progressTrackRef.current,
-            { opacity: 0, scaleX: 0.5 },
-            { opacity: 1, scaleX: 1, duration: 0.4, ease: 'power2.out' },
-            '-=0.2'
-        )
-        // Progress bar fills
-        .fromTo(progressBarRef.current,
-            { scaleX: 0, transformOrigin: 'left center' },
-            { scaleX: 1, duration: 2.2, ease: 'power1.inOut' }
-        );
+            // Logo fades up
+            .fromTo(logoRef.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' },
+                '-=0.2'
+            )
+            // Progress track appears
+            .fromTo(progressTrackRef.current,
+                { opacity: 0, scaleX: 0.5 },
+                { opacity: 1, scaleX: 1, duration: 0.4, ease: 'power2.out' },
+                '-=0.2'
+            )
+            // Progress bar fills
+            .fromTo(progressBarRef.current,
+                { scaleX: 0, transformOrigin: 'left center' },
+                { scaleX: 1, duration: 1.2, ease: 'power1.inOut' }
+            );
 
         const minWait = new Promise(r => setTimeout(r, 2800));
         const mediaLoad = new Promise(r => {
@@ -52,19 +52,19 @@ export default function LoadingScreen({ onComplete }) {
             exitTl.to([logoRef.current, lineLeftRef.current, lineRightRef.current, progressTrackRef.current],
                 { opacity: 0, duration: 0.3, ease: 'power2.in' }
             )
-            // Then split: top panel slides up, bottom panel slides down from the split line
-            .to(panelTopRef.current,
-                { yPercent: -100, duration: 0.8, ease: 'expo.inOut' },
-                '-=0.05'
-            )
-            .to(panelBotRef.current,
-                { yPercent: 100, duration: 0.8, ease: 'expo.inOut' },
-                '<'
-            )
-            .to(centerRef.current,
-                { opacity: 0, duration: 0.1 },
-                '<'
-            );
+                // Then split: top panel slides up, bottom panel slides down from the split line
+                .to(panelTopRef.current,
+                    { yPercent: -100, duration: 0.8, ease: 'expo.inOut' },
+                    '-=0.05'
+                )
+                .to(panelBotRef.current,
+                    { yPercent: 100, duration: 0.8, ease: 'expo.inOut' },
+                    '<'
+                )
+                .to(centerRef.current,
+                    { opacity: 0, duration: 0.1 },
+                    '<'
+                );
         });
     }, []);
 
