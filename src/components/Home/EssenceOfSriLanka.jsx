@@ -70,20 +70,23 @@ export default function EssenceOfSriLanka() {
                     <Link
                         to="/experiences"
                         ref={el => cardsRef.current[5] = el}
-                        className="group flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl col-span-12 md:col-span-6 row-span-2 bg-sand/10 border border-gold/20 p-8 decoration-none"
+                        className="group flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl col-span-12 md:col-span-6 row-span-2 bg-sand/10 border border-gold/30 hover:border-gold p-8 decoration-none cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-gold/10 transform hover:-translate-y-1"
                     >
                         <SmartImage
                             src="/trip-2-island/assets/exp-nine-arches.jpg"
                             alt="Unique Experiences"
-                            className="absolute inset-0 w-full h-full object-cover scale-105 transition-transform duration-700 ease-out group-hover:scale-100 opacity-50 group-hover:opacity-70"
+                            className="absolute inset-0 w-full h-full object-cover scale-100 transition-transform duration-700 ease-out group-hover:scale-110 opacity-50 group-hover:opacity-70"
                         />
                         <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-700"></div>
                         <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMWEzNjI4Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] transition-transform duration-700 ease-out group-hover:scale-110"></div>
-                        <h3 className="text-3xl md:text-4xl font-serif text-sand mb-4 relative z-10">Unique Experiences</h3>
-                        <p className="font-sans text-sand/80 mb-8 relative z-10">Dive into 20 reasons why Sri Lanka should be your next adventure.</p>
-                        <span className="inline-flex items-center justify-center px-6 py-3 border border-gold text-gold font-sans uppercase tracking-widest text-sm group-hover:bg-gold group-hover:text-primary transition-colors duration-300 relative z-10 bg-primary/40 backdrop-blur-sm">
-                            Explore Experiences
-                        </span>
+                        <h3 className="text-3xl md:text-4xl font-serif text-sand mb-4 relative z-10 transform group-hover:scale-105 transition-transform duration-500">Unique Experiences</h3>
+                        <p className="font-sans text-sand/80 mb-8 relative z-10 max-w-md transform group-hover:-translate-y-1 transition-transform duration-500">Dive into 20 reasons why Sri Lanka should be your next adventure.</p>
+                        <div className="inline-flex items-center justify-center px-8 py-4 border border-gold text-gold font-sans uppercase tracking-widest text-sm group-hover:bg-gold group-hover:text-primary transition-all duration-500 relative z-10 bg-primary/40 backdrop-blur-md rounded-sm gap-3">
+                            <span>Explore Experiences</span>
+                            <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
                     </Link>
                 </div>
             </div>

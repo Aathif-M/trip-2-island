@@ -37,6 +37,40 @@ export default function Terms() {
                         While every effort is made to operate all tours as advertised, we reserve the right to change itineraries, accommodations and transport if circumstances demand it.
                     </p>
 
+                    <h2 className="text-2xl font-bold mb-4 mt-8">6. Force Majeure</h2>
+                    <p className="mb-6 leading-relaxed">
+                        Trip2Island shall not be liable for failure or delay in performance due to events beyond its control, including but not limited to monsoons, floods, natural disasters, pandemics, government restrictions, fuel shortages, strikes or civil disturbances in Sri Lanka.
+                    </p>
+                    <p>
+                        In such cases, alternative arrangements may be offered; however, refunds are not guaranteed.
+                    </p>
+
+                    <h2 className="text-2xl font-bold mb-4 mt-8">7. Travel Insurance</h2>
+                    <p className="mb-6 leading-relaxed">
+                        Clients are strongly advised to obtain comprehensive travel insurance covering medical emergencies, cancellations, accidents and loss of personal belongings.
+                    </p>
+                    <p>
+                        Trip2Island will not be responsible for any expenses arising due to lack of insurance.
+                    </p>
+
+                    <h2 className="text-2xl font-bold mb-4 mt-8">8. Visa, Passport & Regulations</h2>
+                    <p className="mb-6 leading-relaxed">
+                        Travelers must carry a valid passport (minimum 6 months validity) and obtain required visas (e.g., Sri Lanka ETA).
+                    </p>
+                    <p>
+                        Clients must comply with all applicable Sri Lankan laws and regulations.
+                    </p>
+                    <p>
+                        Trip2Island is not responsible for visa issues, entry denials or penalties.
+                    </p>
+
+                    <h2 className="text-2xl font-bold mb-4 mt-8">9. Personal Belongings</h2>
+                    <p className="mb-6 leading-relaxed">
+                        Clients are solely responsible for their luggage, valuables and personal items.
+                    </p>
+                    <p>
+                        Trip2Island shall not be liable for any loss, theft or damage.                    </p>
+
                     <div className="mt-12 p-6 bg-sand/30 rounded-xl border border-primary/10">
                         <p className="text-sm italic text-center">
                             Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
