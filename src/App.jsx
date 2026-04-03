@@ -15,6 +15,11 @@ import LoadingScreen from './components/UI/LoadingScreen';
 import PageTransition from './components/UI/PageTransition';
 import CustomCursor from './components/UI/CustomCursor';
 
+console.log(
+    "%c✨ Designed & Developed by TeeBeeU | trip2island.com",
+    "color: #C8AC5F; background: #1C4130; font-size: 14px; font-weight: bold; padding: 8px 15px; border-radius: 5px;"
+);
+
 function App() {
     const [isLoading, setIsLoading] = useState(true);
     return (
@@ -22,23 +27,23 @@ function App() {
             <CustomCursor />
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
             <Router basename="/trip-2-island">
-                    <PageTransition>
-                        <Layout>
-                            <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/about" element={<About />} />
-                                <Route path="/destinations/sri-lanka" element={<Destinations />} />
-                                <Route path="/contact" element={<Contact />} />
-                                <Route path="/itineraries" element={<Itineraries />} />
-                                <Route path="/places-to-stay" element={<PlacesToStay />} />
-                                <Route path="/journal" element={<Journal />} />
-                                <Route path="/faq" element={<FAQ />} />
-                                <Route path="/terms" element={<Terms />} />
-                                <Route path="/experiences" element={<ExperiencesPage />} />
-                            </Routes>
-                        </Layout>
-                    </PageTransition>
-                </Router>
+                <PageTransition>
+                    <Layout>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/destinations/sri-lanka" element={<Destinations />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/itineraries" element={<Itineraries />} />
+                            <Route path="/places-to-stay" element={<PlacesToStay />} />
+                            <Route path="/journal" element={<Journal />} />
+                            <Route path="/faq" element={<FAQ />} />
+                            <Route path="/terms" element={<Terms />} />
+                            <Route path="/experiences" element={<ExperiencesPage />} />
+                        </Routes>
+                    </Layout>
+                </PageTransition>
+            </Router>
         </>
     );
 }

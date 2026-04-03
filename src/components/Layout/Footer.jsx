@@ -89,9 +89,9 @@ export default function Footer() {
                     <p className="text-sand/50 text-xs">
                         &copy; {new Date().getFullYear()} Trip2Island. All rights reserved. Built with ❤️ in Sri Lanka.
                     </p>
-                    <span className="text-sand/30 text-[10px] mt-1 inline-block">
+                    {/* <span className="text-sand/30 text-[10px] mt-1 inline-block">
                         Site by TeeBeeU
-                    </span>
+                    </span> */}
                 </div>
                 <div className="flex items-center gap-2 bg-sand/10 px-4 py-2 rounded-full border border-sand/20">
                     <Leaf className="w-4 h-4 text-green-400" />
