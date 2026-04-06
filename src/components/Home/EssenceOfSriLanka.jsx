@@ -7,11 +7,11 @@ import SmartImage from '../UI/SmartImage';
 gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
-    { title: "Gems & Pearls", placeholder: "Close-up of authentic Sri Lankan Sapphires and Pearls", size: "col-span-12 md:col-span-4 row-span-2", img: "/trip-2-island/assets/essence-gems.jpg" },
-    { title: "Food & Cuisine", placeholder: "Close-up of authentic Sri Lankan Rice & Curry in clay pots", size: "col-span-12 md:col-span-8 row-span-1", img: "/trip-2-island/assets/essence-food.jpg" },
-    { title: "Culture & Festivals", placeholder: "Traditional Kandy Esala Perahera dancers in vibrant costumes", size: "col-span-12 md:col-span-4 row-span-1", img: "/trip-2-island/assets/essence-culture.jpg" },
-    { title: "Ayurveda & Wellness", placeholder: "Relaxing Ayurveda spa setup with herbal oils and lotus flowers", size: "col-span-12 md:col-span-4 row-span-1", img: "/trip-2-island/assets/essence-ayurveda.jpg" },
-    { title: "Friendly People & Hospitality", placeholder: "Smiling locals greeting with traditional Ayubowan gesture", size: "col-span-12 md:col-span-6 row-span-2", img: "/trip-2-island/assets/essence-people.jpg" },
+    { title: "Gems & Pearls", placeholder: "Close-up of authentic Sri Lankan Sapphires and Pearls", size: "col-span-12 md:col-span-4 row-span-2", img: "/assets/essence-gems.jpg" },
+    { title: "Food & Cuisine", placeholder: "Close-up of authentic Sri Lankan Rice & Curry in clay pots", size: "col-span-12 md:col-span-8 row-span-1", img: "/assets/essence-food.jpg" },
+    { title: "Culture & Festivals", placeholder: "Traditional Kandy Esala Perahera dancers in vibrant costumes", size: "col-span-12 md:col-span-4 row-span-1", img: "/assets/essence-culture.jpg" },
+    { title: "Ayurveda & Wellness", placeholder: "Relaxing Ayurveda spa setup with herbal oils and lotus flowers", size: "col-span-12 md:col-span-4 row-span-1", img: "/assets/essence-ayurveda.jpg" },
+    { title: "Friendly People & Hospitality", placeholder: "Smiling locals greeting with traditional Ayubowan gesture", size: "col-span-12 md:col-span-6 row-span-2", img: "/assets/essence-people.jpg" },
 ];
 
 export default function EssenceOfSriLanka() {
@@ -73,7 +73,7 @@ export default function EssenceOfSriLanka() {
                         className="group flex flex-col items-center justify-center text-center relative overflow-hidden rounded-xl col-span-12 md:col-span-6 row-span-2 bg-sand/10 border border-gold/30 hover:border-gold p-8 decoration-none cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-gold/10 transform hover:-translate-y-1"
                     >
                         <SmartImage
-                            src="/trip-2-island/assets/exp-nine-arches.jpg"
+                            src="/assets/exp-nine-arches.jpg"
                             alt="Unique Experiences"
                             className="absolute inset-0 w-full h-full object-cover scale-100 transition-transform duration-700 ease-out group-hover:scale-110 opacity-50 group-hover:opacity-70"
                         />

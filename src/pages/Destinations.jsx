@@ -17,7 +17,7 @@ export default function Destinations() {
                 {/* Map Area */}
                 <div className="w-full h-[40vh] sm:h-[55vh] bg-primary/20 rounded-3xl overflow-hidden mb-16 sm:mb-24 relative shadow-2xl">
                     <SmartImage
-                        src="/trip-2-island/assets/map-sri-lanka.png"
+                        src="/assets/map-sri-lanka.png"
                         alt="Map of Sri Lanka"
                         className="w-full h-full object-cover opacity-60"
                     />
@@ -68,7 +68,7 @@ export default function Destinations() {
                         <div key={idx} id={region.id} className={`flex flex-col ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 sm:gap-12 lg:gap-20 items-center scroll-mt-32`}>
                             <div className="w-full lg:w-1/2 h-[280px] sm:h-[380px] lg:h-[500px] bg-primary/20 rounded-2xl flex items-center justify-center text-primary/50 relative overflow-hidden">
                                 <SmartImage
-                                    src={`/trip-2-island/assets/region-${region.id}.jpg`}
+                                    src={`/assets/region-${region.id}.jpg`}
                                     alt={region.name}
                                     className="w-full h-full object-cover mix-blend-overlay opacity-80 hover:opacity-100 hover:mix-blend-normal transition-all duration-700 hover:scale-105"
                                 />
@@ -106,7 +106,7 @@ export default function Destinations() {
                             </svg>
                         </button>
                         <SmartImage
-                            src="/trip-2-island/assets/map-sri-lanka.png"
+                            src="/assets/map-sri-lanka.png"
                             alt="Map of Sri Lanka Full Size"
                             className="max-w-full max-h-full object-contain cursor-default rounded-xl"
                             onClick={(e) => e.stopPropagation()}

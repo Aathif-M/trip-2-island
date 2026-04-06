@@ -49,7 +49,7 @@ export default function FeaturedStays() {
             title: "Wild Coast Tented Lodge",
             location: "Yala National Park",
             desc: "Where the untamed jungle meets the pristine Indian Ocean. Unique cocoon tents offering unparalleled luxury in the wilderness.",
-            img: "/trip-2-island/assets/stay-wild-coast.jpg",
+            img: "/assets/stay-wild-coast.jpg",
             align: "left"
         },
         {
@@ -57,7 +57,7 @@ export default function FeaturedStays() {
             title: "Amangalla",
             location: "Galle Fort",
             desc: "Step back in time within the ramparts of a 17th-century Dutch fort. Antique furnishings, polished teak and timeless elegance.",
-            img: "/trip-2-island/assets/stay-amangalla.jpg",
+            img: "/assets/stay-amangalla.jpg",
             align: "right"
         },
         {
@@ -65,7 +65,7 @@ export default function FeaturedStays() {
             title: "Ceylon Tea Trails",
             location: "Hatton",
             desc: "Restored colonial-era tea planters' bungalows perched above the misty valleys of the central highlands.",
-            img: "/trip-2-island/assets/stay-tea-trails.jpg",
+            img: "/assets/stay-tea-trails.jpg",
             align: "left"
         }
     ];

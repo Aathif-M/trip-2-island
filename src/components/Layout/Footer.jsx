@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-6">
                     <Link to="/" className="flex items-center">
                         <SmartImage
-                            src="/trip-2-island/assets/logo-light.png"
+                            src="/assets/logo-light.png"
                             alt="Trip2Island Logo"
                             className="lg:h-13 h-13 w-auto object-contain mb-2"
                         />

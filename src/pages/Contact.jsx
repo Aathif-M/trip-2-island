@@ -10,6 +10,7 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [referralCode, setReferralCode] = useState("");
     const [status, setStatus] = useState("idle"); // idle, submitting, success, error
 
     const handleSubmit = async (e) => {
@@ -33,7 +34,7 @@ export default function Contact() {
             subject: `New Trip Inquiry from ${name}`,
             from_name: name,
             email: email,
-            message: `Dream Trip Details:\n${message}\n\ntravel_dates: ${dateStr}\ntrip_style: ${styleStr}`
+            message: `Dream Trip Details:\n${message}\n\ntravel_dates: ${dateStr}\ntrip_style: ${styleStr}\nreferral_code: ${referralCode || "Not provided"}`
         };
 
         try {
@@ -52,6 +53,7 @@ export default function Contact() {
                 setName("");
                 setEmail("");
                 setMessage("");
+                setReferralCode("");
                 setTravelDates({ startDate: null, endDate: null });
                 setTripStyle("");
             } else {
@@ -101,6 +103,11 @@ export default function Contact() {
                                         placeholder="Select Trip Style"
                                     />
                                 </div>
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                                <label className="text-sm font-semibold uppercase tracking-wider text-primary/70">Referral Code (Optional)</label>
+                                <input type="text" value={referralCode} onChange={(e) => setReferralCode(e.target.value)} className="bg-sand/30 border border-primary/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="e.g. SUMMER2026" />
                             </div>
 
                             <div className="flex flex-col gap-2 relative">
@@ -162,7 +169,7 @@ export default function Contact() {
 
                         <div className="flex-grow rounded-3xl overflow-hidden relative min-h-[250px] bg-primary/20 flex items-center justify-center text-primary/50 shadow-inner">
                             <SmartImage
-                                src="/trip-2-island/assets/page-contact.jpg"
+                                src="/assets/page-contact.jpg"
                                 alt="Sri Lanka Beach"
                                 className="w-full h-full object-cover"
                             />

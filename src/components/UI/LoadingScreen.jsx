@@ -81,7 +81,7 @@ export default function LoadingScreen({ onComplete }) {
                     <div ref={lineLeftRef} className="h-[1px] w-20 bg-accent/50 origin-right scale-x-0" />
                     <div ref={logoRef} className="opacity-0">
                         <SmartImage
-                            src="/trip-2-island/assets/logo-light.png"
+                            src="/assets/logo-light.png"
                             alt="Trip2Island"
                             className="h-14 w-auto object-contain"
                         />

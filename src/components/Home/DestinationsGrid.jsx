@@ -32,7 +32,7 @@ export default function DestinationsGrid() {
             name: "South Coast",
             id: "south-coast",
             desc: "Palm-fringed golden beaches & surf towns",
-            img: "/trip-2-island/assets/region-south-coast.jpg",
+            img: "/assets/region-south-coast.jpg",
             colSpan: "col-span-1 md:col-span-2",
             rowSpan: "md:row-span-2",
             aspect: "aspect-video md:aspect-auto"
@@ -41,7 +41,7 @@ export default function DestinationsGrid() {
             name: "Cultural Triangle",
             id: "cultural-triangle",
             desc: "Ancient ruins & sacred temples",
-            img: "/trip-2-island/assets/region-cultural-triangle.jpg",
+            img: "/assets/region-cultural-triangle.jpg",
             colSpan: "col-span-1 md:col-span-1",
             rowSpan: "md:row-span-1",
             aspect: "aspect-video md:aspect-[4/3]"
@@ -50,7 +50,7 @@ export default function DestinationsGrid() {
             name: "Hill Country",
             id: "hill-country",
             desc: "Misty tea estates & waterfalls",
-            img: "/trip-2-island/assets/region-hill-country.jpg",
+            img: "/assets/region-hill-country.jpg",
             colSpan: "col-span-1 md:col-span-1",
             rowSpan: "md:row-span-1",
             aspect: "aspect-video md:aspect-[4/3]"
@@ -59,7 +59,7 @@ export default function DestinationsGrid() {
             name: "Northern Explorer",
             id: "northern-explorer",
             desc: "Untamed nature & vibrant heritage",
-            img: "/trip-2-island/assets/region-northern-explorer.jpg",
+            img: "/assets/region-northern-explorer.jpg",
             colSpan: "col-span-1 md:col-span-2",
             rowSpan: "md:row-span-1",
             aspect: "aspect-video md:aspect-[21/9]"

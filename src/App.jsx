@@ -26,7 +26,7 @@ function App() {
         <>
             <CustomCursor />
             {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-            <Router basename="/trip-2-island">
+            <Router basename="/">
                 <PageTransition>
                     <Layout>
                         <Routes>

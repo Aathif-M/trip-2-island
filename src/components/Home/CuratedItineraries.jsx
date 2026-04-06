@@ -38,25 +38,25 @@ export default function CuratedItineraries() {
             title: "Culture & History",
             duration: "10 Days",
             desc: "Walk amidst ancient fortresses, sacred relics and time-honored traditions in the Cultural Triangle.",
-            img: "/trip-2-island/assets/itinerary-culture.jpg"
+            img: "/assets/itinerary-culture.jpg"
         },
         {
             title: "Wildlife Safari",
             duration: "12 Days",
             desc: "Track elusive leopards in Yala and witness the majestic elephant gathering at Minneriya.",
-            img: "/trip-2-island/assets/itinerary-wildlife.jpg"
+            img: "/assets/itinerary-wildlife.jpg"
         },
         {
             title: "Honeymoon Escapes",
             duration: "14 Days",
             desc: "Secluded boutique luxury, private beach dinners and romantic train rides through the hills.",
-            img: "/trip-2-island/assets/itinerary-honeymoon.jpg"
+            img: "/assets/itinerary-honeymoon.jpg"
         },
         {
             title: "Family Adventures",
             duration: "8 Days",
             desc: "Engaging activities for all ages from gentle river safaris to learning traditional crafts.",
-            img: "/trip-2-island/assets/itinerary-family.jpg"
+            img: "/assets/itinerary-family.jpg"
         }
     ];
 

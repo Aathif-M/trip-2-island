@@ -104,7 +104,7 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center relative z-50">
                         <SmartImage
                             ref={logoRef}
-                            src="/trip-2-island/assets/logo.png"
+                            src="/assets/logo.png"
                             alt="trip2island logo"
                             className="w-auto object-contain hover:scale-105 transition-transform duration-300"
                             style={{ height: '5rem' }}

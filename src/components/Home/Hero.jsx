@@ -5,10 +5,10 @@ import SmartImage from '../UI/SmartImage';
 import SmartVideo from '../UI/SmartVideo';
 
 const slides = [
-    { type: 'image', src: '/trip-2-island/assets/slider-1.jpg' },
-    { type: 'image', src: '/trip-2-island/assets/slider-2.jpg' },
-    { type: 'image', src: '/trip-2-island/assets/slider-3.jpg' },
-    { type: 'image', src: '/trip-2-island/assets/slider-4.jpg' }
+    { type: 'image', src: '/assets/slider-1.jpg' },
+    { type: 'image', src: '/assets/slider-2.jpg' },
+    { type: 'image', src: '/assets/slider-3.jpg' },
+    { type: 'image', src: '/assets/slider-4.jpg' }
 ];
 
 // Inject Ken Burns keyframe CSS once into the document head

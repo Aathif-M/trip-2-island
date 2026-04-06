@@ -57,7 +57,7 @@ export default function ExperiencesPage() {
             <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-primary">
                 <div className="absolute inset-0 bg-[#1C4130] opacity-80 z-10"></div>
                 <SmartVideo
-                    src="/trip-2-island/assets/page-experiences.mp4"
+                    src="/assets/page-experiences.mp4"
                     autoPlay
                     loop
                     muted
@@ -87,7 +87,7 @@ export default function ExperiencesPage() {
                                     <div className="relative w-full aspect-[4/3] bg-[#E6E9E3] rounded-2xl overflow-hidden group shadow-lg">
                                         <div className="absolute inset-0 overflow-hidden">
                                             <SmartImage 
-                                                src={`/trip-2-island/assets/${exp.image}`} 
+                                                src={`/assets/${exp.image}`} 
                                                 alt={exp.title} 
                                                 className="w-full h-full object-cover scale-105 transition-transform duration-1000 group-hover:scale-100" 
                                             />
